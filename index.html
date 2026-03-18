@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>친절한유성쌤이 추천하는 AI 도구 모음집 2026</title>
+<meta name="description" content="유쌤클래스 AI콘텐츠마케팅연구소 - 2026년 최신 AI 도구 8개 카테고리 79개 추천 모음">
+<meta name="author" content="친절한유성쌤 김유성">
+<meta property="og:title" content="친절한유성쌤 AI 도구 모음집 2026">
+<meta property="og:description" content="텍스트·이미지·영상·음악·편집·프레젠테이션·올인원·에이전트 8개 카테고리 AI 도구 추천">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<style>
+:root {
+  --bg: #F4F5F7;
+  --card-bg: #FFFFFF;
+  --border: #E2E5EA;
+  --border-light: #EDF0F3;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #94A3B8;
+  --accent: #2563EB;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes slideIn { from { opacity:0; transform:translateX(16px) } to { opacity:1; transform:translateX(0) } }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+@keyframes cardIn { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px 56px; }
+
+/* HEADER */
+.hdr { text-align:center; padding:40px 0 28px; }
+.hdr-badge { display:inline-flex; align-items:center; gap:6px; background:#EFF6FF; border:1px solid #BFDBFE; padding:6px 16px; border-radius:24px; font-size:12.5px; font-weight:650; color:#2563EB; margin-bottom:16px; }
+.hdr-badge-ico { animation: float 2.5s ease infinite; display:inline-block; }
+.hdr-title { font-size:34px; font-weight:900; letter-spacing:-0.04em; line-height:1.25; background:linear-gradient(135deg,#0F172A 0%,#4338CA 50%,#2563EB 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:8px; }
+.hdr-stats { font-size:14px; color:var(--text-secondary); margin-bottom:4px; }
+.hdr-sub { font-size:12.5px; color:var(--text-tertiary); }
+
+/* SEARCH */
+.search-wrap { position:relative; margin:0 auto 28px; max-width:600px; }
+.search-ico { position:absolute; left:16px; top:50%; transform:translateY(-50%); font-size:17px; color:var(--text-tertiary); pointer-events:none; }
+.search-input { width:100%; padding:14px 16px 14px 46px; border:1.5px solid var(--border); border-radius:14px; font-size:14px; font-family:inherit; background:var(--card-bg); outline:none; transition:all .2s; color:var(--text-primary); box-shadow:0 1px 3px rgba(0,0,0,.04); }
+.search-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(37,99,235,.1); }
+.search-input::placeholder { color:var(--text-tertiary); }
+
+/* CATEGORY GRID */
+.cat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.cat-card { width:100%; padding:20px; background:var(--card-bg); border:1.5px solid var(--border); border-radius:16px; cursor:pointer; text-align:left; font-family:inherit; position:relative; overflow:hidden; transition:all .28s cubic-bezier(.4,0,.2,1); box-shadow:0 1px 3px rgba(0,0,0,.04); animation:cardIn .4s ease both; display:flex; align-items:center; }
+.cat-card:hover { transform:translateY(-4px); box-shadow:0 8px 32px rgba(0,0,0,.08); border-color:var(--accent); }
+.cat-bar { position:absolute; top:0;left:0;right:0; height:3px; border-radius:16px 16px 0 0; }
+.cat-inner { display:flex; align-items:center; gap:14px; width:100%; }
+.cat-icon { width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:25px; flex-shrink:0; }
+.cat-text { flex:1; min-width:0; }
+.cat-name { font-weight:800; font-size:15px; letter-spacing:-0.02em; color:var(--text-primary); }
+.cat-sub { font-size:12px; color:var(--text-tertiary); margin-top:3px; }
+.cat-count { font-size:12px; font-weight:700; padding:5px 13px; border-radius:20px; flex-shrink:0; white-space:nowrap; }
+
+/* DETAIL VIEW */
+.back-btn { background:none; border:none; cursor:pointer; display:flex; align-items:center; gap:6px; color:var(--text-secondary); font-size:13.5px; font-weight:600; padding:10px 0; margin-bottom:14px; font-family:inherit; transition:color .2s; }
+.back-btn:hover { color:var(--accent); }
+.hero-banner { border-radius:20px; padding:36px; margin-bottom:22px; color:#fff; position:relative; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.08); }
+.hero-bg-icon { position:absolute; top:-30px;right:-20px; font-size:150px; opacity:.12; pointer-events:none; }
+.hero-main-icon { font-size:46px; margin-bottom:12px; filter:drop-shadow(0 2px 8px rgba(0,0,0,.15)); }
+.hero-title { font-size:28px; font-weight:900; letter-spacing:-0.03em; margin-bottom:4px; color:#fff; background:none; -webkit-text-fill-color:#fff; }
+.hero-subtitle { font-size:14px; opacity:.8; }
+.hero-concept { font-size:14px; line-height:1.75; margin-top:16px; opacity:.92; }
+
+.info-toggle-btn { width:100%; padding:15px 20px; background:var(--card-bg); border:1.5px solid var(--border); border-radius:14px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-family:inherit; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:all .2s; }
+.info-toggle-btn:hover { border-color:var(--accent); }
+.info-toggle-label { display:flex; align-items:center; gap:8px; font-weight:750; font-size:14px; color:var(--text-primary); }
+.info-toggle-arrow { transition: transform 0.3s; }
+
+.info-panel { background:var(--card-bg); border:1.5px solid var(--border); border-radius:16px; padding:28px; margin-bottom:24px; box-shadow:0 1px 3px rgba(0,0,0,.04); animation:fadeIn .3s ease; }
+.info-section { margin-bottom:20px; }
+.info-section:last-of-type { margin-bottom:0; }
+.info-section-header { display:flex; align-items:center; gap:8px; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border-light); }
+.info-section-icon { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:14px; }
+.info-section-title { font-weight:750; font-size:14px; color:var(--text-primary); letter-spacing:-0.01em; }
+.info-items { display:flex; flex-direction:column; gap:7px; }
+.info-item { font-size:13px; color:var(--text-secondary); line-height:1.65; padding-left:16px; position:relative; }
+.info-item .bullet { position:absolute; left:0; font-weight:700; font-size:8px; top:6px; }
+.info-item strong { color:var(--text-primary); font-weight:650; }
+.info-source { font-size:11px; color:var(--text-tertiary); margin-top:16px; padding-top:14px; border-top:1px solid var(--border); }
+
+.tools-list-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+.tools-list-title { font-size:17px; font-weight:800; color:var(--text-primary); letter-spacing:-0.02em; }
+.tools-list-count { font-size:12px; font-weight:700; padding:5px 13px; border-radius:20px; }
+
+.tools-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+
+/* TOOL CARD */
+.tool-card { display:block; padding:16px 18px; background:var(--card-bg); border-radius:14px; border:1.5px solid var(--border); text-decoration:none; position:relative; overflow:hidden; transition:all .25s cubic-bezier(.4,0,.2,1); box-shadow:0 1px 3px rgba(0,0,0,.04); }
+.tool-card:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(0,0,0,.1); border-color:var(--accent); }
+.tool-name-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+.tool-name { font-weight:750; font-size:14px; color:var(--text-primary); letter-spacing:-0.01em; }
+.tool-badge { font-size:10px; font-weight:700; padding:2px 8px; border-radius:6px; border:1px solid; white-space:nowrap; line-height:16px; }
+.tool-desc { font-size:12.5px; color:var(--text-secondary); line-height:1.55; }
+.tool-arrow { position:absolute; right:16px; top:50%; transform:translateY(-50%); font-size:15px; color:var(--text-tertiary); opacity:.5; }
+
+/* SEARCH RESULTS */
+.search-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.search-cat-tag { position:absolute; bottom:10px; right:36px; font-size:10px; padding:2px 8px; border-radius:6px; font-weight:650; pointer-events:none; }
+
+/* FOOTER */
+.ftr { text-align:center; margin-top:44px; padding-top:24px; border-top:1.5px solid var(--border); }
+.ftr p { font-size:12px; color:var(--text-tertiary); line-height:1.8; }
+.ftr-links { display:flex; justify-content:center; gap:16px; margin-top:12px; }
+.ftr-links a { font-size:12.5px; color:var(--accent); text-decoration:none; font-weight:600; transition:opacity .2s; }
+.ftr-links a:hover { opacity:.7; }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .container { padding:0 16px 40px; }
+  .hdr { padding:28px 0 22px; }
+  .hdr-title { font-size:26px; }
+  .hdr-stats { font-size:13px; }
+  .cat-grid { grid-template-columns:1fr; gap:10px; }
+  .cat-card { padding:16px; }
+  .cat-icon { width:44px; height:44px; font-size:22px; border-radius:12px; }
+  .tools-grid { grid-template-columns:1fr; }
+  .search-grid { grid-template-columns:1fr; }
+  .hero-banner { padding:24px; border-radius:16px; }
+  .hero-main-icon { font-size:38px; }
+  .hero-title { font-size:22px; }
+  .hero-concept { font-size:13px; }
+  .hero-bg-icon { font-size:110px; top:-20px; right:-10px; }
+  .info-panel { padding:20px; }
+}
+@media (max-width:420px) {
+  .container { padding:0 14px 36px; }
+  .hdr { padding:22px 0 18px; }
+  .hdr-title { font-size:22px; }
+  .hdr-badge { font-size:11px; padding:5px 12px; }
+  .search-input { padding:12px 14px 12px 40px; font-size:13px; border-radius:12px; }
+  .cat-card { padding:14px; }
+  .cat-icon { width:40px; height:40px; font-size:20px; border-radius:11px; }
+  .cat-name { font-size:14px; }
+  .hero-banner { padding:20px; }
+  .hero-main-icon { font-size:32px; margin-bottom:8px; }
+  .hero-title { font-size:20px; }
+  .hero-subtitle { font-size:12.5px; }
+  .hero-concept { font-size:12.5px; line-height:1.7; margin-top:12px; }
+  .info-panel { padding:16px; }
+  .info-section-title { font-size:13px; }
+  .info-item { font-size:12.5px; }
+  .tool-card { padding:14px 16px; }
+  .tool-name { font-size:13px; }
+  .tool-desc { font-size:12px; }
+}
+@media (min-width:960px) {
+  .cat-grid { grid-template-columns:repeat(2,1fr); gap:16px; }
+  .tools-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+  .search-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+  .hero-banner { padding:40px; }
+  .hero-title { font-size:30px; }
+}
+
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-thumb { background:#CBD5E1; border-radius:6px; }
+::-webkit-scrollbar-track { background:transparent; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const categories = [
+  {
+    id: "text", icon: "📝", name: "텍스트 생성 AI", subtitle: "AI 챗봇 / 글쓰기",
+    color: "#2563EB", gradient: "linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%)",
+    concept: "자연어 처리(NLP) 기술을 기반으로 사용자와의 대화를 통해 정보 요약, 질의응답, 다양한 텍스트 창작을 수행하는 인공지능입니다. 대규모 언어 모델(LLM)을 기반으로 인간의 언어를 깊이 있게 이해하고 구사합니다.",
+    features: [
+      "대화형 질의응답 및 리서치 — 복잡한 맥락을 파악해 깊이 있는 답변과 브레인스토밍 지원",
+      "텍스트 생성 및 편집 — 보고서, 이메일, 소설, 시나리오 등 목적과 스타일에 맞는 결과물 생성",
+    ],
+    useCases: [
+      "콘텐츠 제작 — 블로그, 광고 카피, SNS 게시물 초안 생성",
+      "업무 지원 — 회의록 요약, 보고서 작성, 코드 개발, 이메일 자동화",
+      "학습 보조 — 자료 정리, 아이디어 구체화, 브레인스토밍",
+    ],
+    cautions: [
+      "환각(Hallucination) — AI가 없는 정보를 사실처럼 생성할 수 있어 사실 검증 필수",
+      "저작권·표절 위험 — 기존 문헌과 유사한 문장 생성 가능, 출처 확인 필요",
+      "편향과 차별 — 학습 데이터의 편향이 결과물에 반영될 수 있음",
+      "개인정보 유출 — 입력 정보가 모델 학습에 재사용될 수 있으므로 민감 정보 입력 주의",
+    ],
+    tools: [
+      { name: "ChatGPT (GPT-4o)", url: "https://chat.openai.com/", desc: "OpenAI의 대표 LLM, 범용 대화·글쓰기", badge: "유쌤추천" },
+      { name: "Google Gemini", url: "https://gemini.google.com/", desc: "구글 AI, 검색 연동 강력한 답변", badge: "유쌤추천" },
+      { name: "Claude", url: "https://claude.ai/", desc: "Anthropic AI, 긴 문서 분석·글쓰기에 강점", badge: "유쌤추천" },
+      { name: "Perplexity Pro", url: "https://www.perplexity.ai/", desc: "AI 기반 검색 엔진, 출처 표시 리서치", badge: "유쌤추천" },
+      { name: "Microsoft Copilot", url: "https://copilot.microsoft.com/", desc: "MS 오피스 통합, 업무 생산성 도구" },
+      { name: "뤼튼 (Wrtn.ai)", url: "https://wrtn.ai/", desc: "한국어 특화 AI, 블로그·보고서 작성", badge: "국내" },
+      { name: "네이버 클로바X", url: "https://clova.ai/", desc: "네이버 한국어 기반 AI 서비스", badge: "국내" },
+      { name: "Grok", url: "https://x.ai/grok", desc: "xAI의 실시간 정보 기반 AI" },
+      { name: "Jasper", url: "https://www.jasper.ai/", desc: "마케팅 콘텐츠 전문 AI 작성 도구" },
+      { name: "Notion AI", url: "https://www.notion.so/product/ai", desc: "노션 통합 AI 글쓰기·요약·정리" },
+    ],
+  },
+  {
+    id: "image", icon: "🎨", name: "이미지 생성 AI", subtitle: "Text to Image / 디자인",
+    color: "#DB2777", gradient: "linear-gradient(135deg, #BE185D 0%, #F59E0B 100%)",
+    concept: "텍스트 설명(프롬프트)을 입력으로 받아 시각적 결과물을 자동 생성하는 기술입니다. 확산 모델(Diffusion Model) 기반으로 세상에 없던 이미지를 만들어냅니다.",
+    features: [
+      "텍스트 기반 시각화(Text-to-Image) — 키워드·문장을 분석해 구체적 이미지로 변환",
+      "다양한 스타일 구현 — 사진, 일러스트, 유화, 3D 렌더링 등 다양한 화풍 적용",
+    ],
+    useCases: [
+      "디자인 및 브랜딩 — 시제품 콘셉트, 로고, 웹 그래픽 빠른 시각화",
+      "콘텐츠 마케팅 — 블로그, SNS, 광고 캠페인 시각 자료 제작",
+      "예술·엔터테인먼트 — 콘셉트 아트, 캐릭터 디자인, 가상 배경",
+    ],
+    cautions: [
+      "저작권·표절 위험 — 특정 작가 스타일 모방 시 분쟁 가능",
+      "딥페이크 위험 — 유명인 합성 이미지를 통한 허위·조작 가능성",
+    ],
+    tools: [
+      { name: "Google Gemini (나노바나나)", url: "https://gemini.google.com/", desc: "구글 Gemini 내 이미지 생성, 나노바나나 모델", badge: "유쌤추천" },
+      { name: "GPT 이미지 (DALL·E)", url: "https://chat.openai.com/", desc: "ChatGPT 내 이미지 생성, DALL·E 통합" },
+      { name: "Midjourney", url: "https://www.midjourney.com/", desc: "예술적 스타일에 강점, 고퀄리티" },
+      { name: "Stable Diffusion", url: "https://dreamstudio.ai/", desc: "오픈소스, 자유 수정 가능" },
+      { name: "Grok Imagine", url: "https://x.ai/grok", desc: "xAI의 이미지 생성 기능", badge: "NEW" },
+      { name: "Seedream (씨드림)", url: "https://seedream.ai/", desc: "바이트댄스의 이미지 생성 모델", badge: "NEW" },
+      { name: "Flux (플럭스)", url: "https://flux.ai/", desc: "차세대 고품질 이미지 생성 모델", badge: "NEW" },
+      { name: "Recraft (리크래프트)", url: "https://www.recraft.ai/", desc: "벡터·디자인 특화 이미지 생성" },
+      { name: "Ideogram (이디오그램)", url: "https://ideogram.ai/", desc: "텍스트 렌더링에 강점" },
+      { name: "Canva", url: "https://www.canva.com/", desc: "AI 이미지 생성 + 디자인 통합 플랫폼" },
+      { name: "Adobe Firefly", url: "https://firefly.adobe.com/", desc: "어도비 생태계 통합 AI 이미지" },
+      { name: "Leonardo AI", url: "https://leonardo.ai/", desc: "게임·3D 콘셉트 아트 특화" },
+    ],
+  },
+  {
+    id: "video", icon: "🎬", name: "영상 생성 AI", subtitle: "Text/Image to Video / AI 아바타",
+    color: "#DC2626", gradient: "linear-gradient(135deg, #B91C1C 0%, #F97316 100%)",
+    concept: "텍스트, 이미지, 음성 등 여러 형태의 데이터를 조합해 새로운 영상을 제작하는 생성형 AI입니다. 전문 편집 기술 없이도 아이디어만으로 영상을 만들 수 있습니다.",
+    features: [
+      "다양한 입력 기반 영상 생성 — 텍스트·이미지·음성을 조합한 영상 자동 제작",
+      "AI 아바타·캐릭터 구현 — 가상 인물이 텍스트에 맞춰 말하고 움직이는 영상",
+    ],
+    useCases: [
+      "마케팅·홍보 — 제품 소개, SNS 광고, 기업 홍보 영상",
+      "교육·정보 전달 — 직원 교육, 온라인 강의, 뉴스 브리핑",
+      "엔터테인먼트 — 애니메이션, 단편 영화, 뮤직비디오 초기 제작",
+    ],
+    cautions: [
+      "허위·조작 영상 — 딥페이크를 통한 가짜뉴스·평판 피해 위험",
+      "저작권·초상권 — 기존 영상 무단 활용·얼굴 합성 시 권리 침해",
+      "유해 콘텐츠 — 딥페이크의 범죄 악용, 발견 시 즉시 신고 필요",
+    ],
+    tools: [
+      { name: "Google Gemini VEO", url: "https://deepmind.google/technologies/veo", desc: "구글 딥마인드 차세대 영상 생성 모델", badge: "유쌤추천" },
+      { name: "Google Flow", url: "https://flow.google/", desc: "구글 AI 영상 생성·편집 통합 도구", badge: "유쌤추천" },
+      { name: "OpenAI Sora 2", url: "https://openai.com/sora", desc: "OpenAI 차세대 텍스트→영상 생성" },
+      { name: "Runway Gen-4.5", url: "https://runwayml.com/", desc: "영상 생성·편집 통합 플랫폼" },
+      { name: "Kling O1 (콰이쇼)", url: "https://klingai.com/", desc: "고품질 영상 생성, 접근성 우수", badge: "HOT" },
+      { name: "Seedance (바이트댄스)", url: "https://seedance.ai/", desc: "바이트댄스 비디오 생성 모델", badge: "NEW" },
+      { name: "HaiLuo (MiniMax)", url: "https://hailuoai.video/", desc: "시우 테크놀로지 영상 AI" },
+      { name: "Vidu (생수 테크놀로지)", url: "https://www.vidu.com/", desc: "중국 기반 비디오 생성 AI" },
+      { name: "Pika", url: "https://pika.art/", desc: "텍스트·이미지 기반 영상 생성" },
+      { name: "Luma Dream Machine", url: "https://lumalabs.ai/dream-machine", desc: "3D·영상 생성 전문" },
+      { name: "Synthesia", url: "https://www.synthesia.io/", desc: "AI 아바타 영상 제작 1위 플랫폼", badge: "아바타" },
+      { name: "HeyGen", url: "https://www.heygen.com/", desc: "AI 아바타 마케팅 영상 특화", badge: "아바타" },
+      { name: "DeepBrain AI", url: "https://www.deepbrain.io/", desc: "국내 AI 아바타 플랫폼", badge: "국내" },
+    ],
+  },
+  {
+    id: "music", icon: "🎵", name: "음악 / 오디오 생성 AI", subtitle: "AI 작곡 / BGM 제작",
+    color: "#7C3AED", gradient: "linear-gradient(135deg, #6D28D9 0%, #EC4899 100%)",
+    concept: "텍스트 설명이나 장르·분위기 등 간단한 조건만으로 완성도 높은 음악을 작곡·편곡·연주하는 생성형 AI입니다. 음악 창작의 진입 장벽을 크게 낮추고 있습니다.",
+    features: [
+      "맞춤형 음악 작곡 — 장르, 악기, 템포, 분위기를 텍스트로 지정해 작곡",
+      "실시간 수정·편곡 — 악기 교체, 곡 구조 변경 등 상호작용형 수정",
+    ],
+    useCases: [
+      "BGM 제작 — 유튜브, 광고, 게임, 팟캐스트 배경음악",
+      "음악 교육 — 이론 학습, 편곡 아이디어, 작곡 영감 도구",
+      "개인화 콘텐츠 — 운동·명상·공부 맞춤형 음악 제작",
+    ],
+    cautions: [
+      "창작자 권리 침해 — 기존 음악과 유사한 멜로디 생성 시 저작권 문제",
+      "실연자 권리 — 가수 목소리·연주 무단 합성 시 권리 침해",
+      "표절·창작성 논란 — AI 음악의 독창성에 대한 사회적 논의 진행 중",
+    ],
+    tools: [
+      { name: "Suno AI", url: "https://suno.ai/", desc: "텍스트로 완성곡 생성, 가사 포함", badge: "유쌤추천" },
+      { name: "Udio", url: "https://www.udio.com/", desc: "고품질 음악 생성, 장르 다양", badge: "유쌤추천" },
+      { name: "Viodio.io (포자랩스)", url: "https://viodio.io/", desc: "저작권 FREE 무제한 음악 생성", badge: "국내" },
+      { name: "AIVA", url: "https://aiva.ai/", desc: "클래식·영화음악 작곡 전문" },
+      { name: "Mubert", url: "https://mubert.com/", desc: "실시간 AI BGM 스트리밍" },
+      { name: "SOUNDRAW", url: "https://soundraw.io/", desc: "커스텀 BGM 생성·편집" },
+      { name: "Boomy", url: "https://boomy.com/", desc: "초간단 AI 음악 제작·배포" },
+      { name: "Beatoven.ai", url: "https://www.beatoven.ai/", desc: "영상용 분위기 맞춤 BGM" },
+    ],
+  },
+  {
+    id: "editing", icon: "🎞️", name: "영상 편집 / 숏폼 제작", subtitle: "AI 편집 / 자막 / 숏폼",
+    color: "#0D9488", gradient: "linear-gradient(135deg, #0F766E 0%, #34D399 100%)",
+    concept: "AI 기술을 활용해 영상 편집, 자막 생성, 음성 삽입, 숏폼 콘텐츠 제작을 빠르고 쉽게 도와주는 도구입니다. 전문 편집 기술 없이도 고품질 콘텐츠를 만들 수 있습니다.",
+    features: [
+      "AI 자동 자막 — 음성 인식 기반 자동 자막 생성 및 다국어 번역",
+      "숏폼 최적화 — 릴스, 쇼츠, 틱톡에 최적화된 세로형 편집",
+      "AI 음성 삽입 — 200개 이상 고품질 AI 음성으로 나레이션 생성",
+    ],
+    useCases: [
+      "유튜브·SNS — 영상 콘텐츠 편집, 자막 삽입, 효과 적용",
+      "숏폼 제작 — 릴스, 쇼츠, 틱톡 영상 빠르게 제작",
+      "교육 영상 — 강의 녹화 편집, AI 음성 더빙, 자막 번역",
+    ],
+    cautions: [
+      "저작권 — 배경음악, 효과음 등 소스 라이선스 확인 필요",
+      "품질 한계 — AI 자동 편집은 세밀한 연출에 한계가 있을 수 있음",
+      "의존성 — 특정 플랫폼 종속 시 전환 비용 발생 가능",
+    ],
+    tools: [
+      { name: "CapCut (캡컷)", url: "https://www.capcut.com/", desc: "숏폼 편집 최적화, 교육 현장 가장 많이 사용", badge: "유쌤추천" },
+      { name: "VREW (브루)", url: "https://vrew.voyagerx.com/", desc: "AI 음성 200+, 자막 100+ 언어, 국산 편집기", badge: "유쌤추천" },
+      { name: "Adobe Premiere Pro", url: "https://www.adobe.com/products/premiere.html", desc: "전문가용 영상 편집, AI 기능 강화", badge: "유쌤추천" },
+      { name: "Fliki", url: "https://fliki.ai/", desc: "텍스트→비디오+음성 변환 AI 숏폼 도구" },
+      { name: "InVideo AI", url: "https://invideo.io/", desc: "프롬프트로 영상 자동 생성·편집" },
+      { name: "Pictory", url: "https://pictory.ai/", desc: "긴 글·블로그를 숏폼 영상으로 변환" },
+    ],
+  },
+  {
+    id: "presentation", icon: "📊", name: "프레젠테이션 / 문서 생성", subtitle: "AI PPT / 보고서 / 리서치",
+    color: "#0369A1", gradient: "linear-gradient(135deg, #075985 0%, #38BDF8 100%)",
+    concept: "프롬프트만으로 프레젠테이션을 자동 생성하거나, AI가 자율적으로 리서치·보고서 작성까지 수행하는 도구입니다. 업무 생산성을 획기적으로 높여줍니다.",
+    features: [
+      "프레젠테이션 자동 생성 — 텍스트 입력만으로 슬라이드 구성·디자인 완성",
+      "AI 리서치·보고서 — 주제 입력 시 자료 수집·분석·문서화 자동 수행",
+      "오피스 연동 — MS PowerPoint, Google Slides 연동 편집",
+    ],
+    useCases: [
+      "프레젠테이션 — 기업 발표, 교육 자료, 제안서 빠른 제작",
+      "보고서·리서치 — AI가 자율적으로 조사·분석·문서 작성",
+      "문서 자동화 — 반복적인 보고서, 기획안, 제안서 초안 생성",
+    ],
+    cautions: [
+      "정확성 검증 — AI가 생성한 데이터·통계는 반드시 팩트체크 필요",
+      "디자인 한계 — 자동 생성 디자인이 브랜드 가이드에 맞지 않을 수 있음",
+      "보안 — 내부 기밀 자료를 AI에 입력할 때 유출 주의",
+    ],
+    tools: [
+      { name: "Manus AI", url: "https://manus.im/", desc: "AI 에이전트 기반 자율 리서치·보고서 작성", badge: "유쌤추천" },
+      { name: "Skywork AI", url: "https://skywork.ai/", desc: "AI 자동 프레젠테이션·문서 생성", badge: "유쌤추천" },
+      { name: "Gamma AI", url: "https://gamma.app/", desc: "프롬프트로 프레젠테이션 자동 생성", badge: "유쌤추천" },
+      { name: "Beautiful.ai", url: "https://www.beautiful.ai/", desc: "AI 기반 슬라이드 디자인 자동화" },
+      { name: "Microsoft Copilot (PPT)", url: "https://copilot.microsoft.com/", desc: "파워포인트 통합 AI 슬라이드 생성" },
+      { name: "Google Gemini (Slides)", url: "https://gemini.google.com/", desc: "구글 슬라이드 연동 AI 프레젠테이션" },
+    ],
+  },
+  {
+    id: "allinone", icon: "🌐", name: "올인원 AI 플랫폼", subtitle: "통합 AI / 멀티모달",
+    color: "#4F46E5", gradient: "linear-gradient(135deg, #3730A3 0%, #06B6D4 100%)",
+    concept: "텍스트, 이미지, 음성 등 여러 유형의 데이터를 동시에 이해하고, 새로운 결과물을 만들어내는 차세대 생성형 AI입니다. 여러 AI 모델을 하나의 플랫폼에서 통합적으로 사용할 수 있습니다.",
+    features: [
+      "복합 데이터 처리 — 음성+이미지 동시 이해, 텍스트·영상·음성 결과 제공",
+      "상황 인지·추론 — 대화 맥락, 감정, 환경을 종합 분석해 개인화된 결과",
+      "다중 AI 모델 통합 — 하나의 플랫폼에서 여러 AI 모델을 선택적으로 활용",
+    ],
+    useCases: [
+      "차세대 스마트 비서 — 음성 인식 + 이미지 파악 + 텍스트/음성 안내",
+      "실감형 콘텐츠 — 스토리를 이미지·음악·나레이션으로 자동 변환",
+      "지능형 교육 — 학습자 반응 인식, 난이도 자동 조절",
+    ],
+    cautions: [
+      "편향 증폭 — 각 데이터의 편향이 결합되어 차별적 표현 강화 가능",
+      "정교한 허위정보 — 텍스트+음성+영상 결합 딥페이크는 탐지가 매우 어려움",
+      "프라이버시 침해 — 다양한 데이터를 합쳐 개인 감정·사적 정보 추론 가능",
+    ],
+    tools: [
+      { name: "젠스파크 (GenSpark)", url: "https://genspark.ai/", desc: "AI 에이전트 기반 올인원 검색·생성 플랫폼", badge: "유쌤추천" },
+      { name: "캐럿 (Carat)", url: "https://www.carat.im/", desc: "25+ AI 모델 통합, 이미지·영상·음악 제작", badge: "국내" },
+      { name: "ChatGPT-4o", url: "https://chat.openai.com/", desc: "텍스트·이미지·음성·영상 통합 멀티모달" },
+      { name: "Google Gemini", url: "https://gemini.google.com/", desc: "구글 멀티모달 AI 플랫폼" },
+      { name: "Microsoft Copilot", url: "https://copilot.microsoft.com/", desc: "MS 오피스 통합 멀티모달" },
+      { name: "Claude", url: "https://claude.ai/", desc: "Anthropic 멀티모달 분석·생성" },
+      { name: "Meta AI", url: "https://ai.meta.com/", desc: "메타 오픈소스 멀티모달 AI" },
+      { name: "NAVER 클로바X", url: "https://clova.ai/", desc: "네이버 한국어 멀티모달 AI", badge: "국내" },
+      { name: "A. (A dot)", url: "https://adot.ai/", desc: "SK 멀티모달 AI 비서", badge: "국내" },
+    ],
+  },
+  {
+    id: "agent", icon: "🤖", name: "업무 자동화 / AI 에이전트", subtitle: "자동화 / 바이브코딩 / 에이전트",
+    color: "#EA580C", gradient: "linear-gradient(135deg, #C2410C 0%, #FACC15 100%)",
+    concept: "사용자의 지시를 받아 스스로 계획을 세우고, 여러 도구를 연결·실행하여 복잡한 작업을 자율적으로 수행하는 AI입니다. 2026년 가장 주목받는 AI 트렌드입니다.",
+    features: [
+      "자율형 작업 수행 — 목표를 이해하고 스스로 단계별 계획을 세워 실행",
+      "다중 앱 연동 — 이메일, 캘린더, 문서, 메신저 등 여러 도구를 연결",
+      "바이브코딩 — AI와 대화만으로 웹페이지·업무 도구를 직접 제작",
+    ],
+    useCases: [
+      "업무 자동화 — 반복 업무 제거, 워크플로우 자동 연결",
+      "앱·웹 개발 — 코딩 없이 AI 대화로 서비스 제작 (바이브코딩)",
+      "데이터 처리 — 여러 소스의 데이터를 수집·분석·보고서화",
+    ],
+    cautions: [
+      "보안 위험 — 자율 실행 중 민감한 데이터 접근·유출 가능성",
+      "오류 전파 — 잘못된 판단이 연쇄적으로 작업에 영향을 미칠 수 있음",
+      "과도한 의존 — AI 에이전트에 대한 과도한 의존은 업무 이해력 저하 우려",
+    ],
+    tools: [
+      { name: "Make (구 Integromat)", url: "https://www.make.com/", desc: "노코드 비주얼 자동화 플랫폼", badge: "유쌤추천" },
+      { name: "n8n", url: "https://n8n.io/", desc: "오픈소스 워크플로우 자동화 플랫폼", badge: "유쌤추천" },
+      { name: "Claude Code", url: "https://claude.ai/", desc: "Anthropic 자율형 코딩 에이전트" },
+      { name: "ChatGPT Operator", url: "https://chat.openai.com/", desc: "OpenAI 웹 브라우징 에이전트" },
+      { name: "Cursor", url: "https://cursor.sh/", desc: "AI 코드 에디터, 바이브코딩 대표", badge: "HOT" },
+      { name: "Replit Agent", url: "https://replit.com/", desc: "대화로 앱 제작 바이브코딩 플랫폼" },
+      { name: "Zapier", url: "https://zapier.com/", desc: "5,000+ 앱 연동 자동화" },
+    ],
+  },
+];
+
+const badgeStyles = {
+  "유쌤추천": { bg: "#FEF3C7", text: "#B45309", border: "#FDE68A", icon: "⭐" },
+  "국내": { bg: "#DBEAFE", text: "#1D4ED8", border: "#BFDBFE", icon: "🇰🇷" },
+  "NEW": { bg: "#FCE7F3", text: "#BE185D", border: "#FBCFE8", icon: "✨" },
+  "HOT": { bg: "#FEE2E2", text: "#B91C1C", border: "#FECACA", icon: "🔥" },
+  "아바타": { bg: "#EDE9FE", text: "#6D28D9", border: "#DDD6FE", icon: "🧑" },
+};
+
+function ToolCard({ tool }) {
+  const badge = tool.badge ? badgeStyles[tool.badge] || badgeStyles["유쌤추천"] : null;
+  return (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer" className="tool-card">
+      <div style={{ paddingRight: "22px" }}>
+        <div className="tool-name-row">
+          <span className="tool-name">{tool.name}</span>
+          {badge && (
+            <span className="tool-badge" style={{ background: badge.bg, color: badge.text, borderColor: badge.border }}>
+              {badge.icon} {tool.badge}
+            </span>
+          )}
+        </div>
+        <p className="tool-desc">{tool.desc}</p>
+      </div>
+      <span className="tool-arrow">↗</span>
+    </a>
+  );
+}
+
+function InfoPanel({ title, items, icon, color }) {
+  return (
+    <div className="info-section">
+      <div className="info-section-header">
+        <span className="info-section-icon" style={{ background: color + "14" }}>{icon}</span>
+        <span className="info-section-title">{title}</span>
+      </div>
+      <div className="info-items">
+        {items.map((item, i) => {
+          const parts = item.split(" — ");
+          return (
+            <div key={i} className="info-item">
+              <span className="bullet" style={{ color }}>●</span>
+              {parts.length > 1
+                ? <span><strong>{parts[0]}</strong> — {parts[1]}</span>
+                : <span>{item}</span>}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function CategoryDetail({ category, onBack }) {
+  const [showInfo, setShowInfo] = useState(false);
+  return (
+    <div style={{ animation: "slideIn 0.35s ease" }}>
+      <button onClick={onBack} className="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        전체 카테고리
+      </button>
+      <div className="hero-banner" style={{ background: category.gradient }}>
+        <div className="hero-bg-icon">{category.icon}</div>
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <div className="hero-main-icon">{category.icon}</div>
+          <h2 className="hero-title">{category.name}</h2>
+          <p className="hero-subtitle">{category.subtitle}</p>
+          <p className="hero-concept">{category.concept}</p>
+        </div>
+      </div>
+      <button onClick={() => setShowInfo(!showInfo)} className="info-toggle-btn">
+        <span className="info-toggle-label">
+          <span style={{ fontSize: "16px" }}>📖</span>
+          <span>주요기능 · 활용분야 · 주의점</span>
+        </span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="info-toggle-arrow" style={{ transform: showInfo ? "rotate(180deg)" : "rotate(0)" }}>
+          <path d="M5 8l5 5 5-5" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+      {showInfo && (
+        <div className="info-panel">
+          <InfoPanel icon="⚡" title="주요 기능" items={category.features} color={category.color} />
+          <InfoPanel icon="🎯" title="주요 활용 분야" items={category.useCases} color={category.color} />
+          <InfoPanel icon="⚠️" title="주의점" items={category.cautions} color="#DC2626" />
+          <div className="info-source">출처: 방송통신위원회 생성형AI 이용자 참여 플랫폼 (ai.wiseuser.go.kr)</div>
+        </div>
+      )}
+      <div className="tools-list-header">
+        <h3 className="tools-list-title">추천 AI 도구</h3>
+        <span className="tools-list-count" style={{ background: category.color + "14", color: category.color }}>{category.tools.length}개</span>
+      </div>
+      <div className="tools-grid">
+        {category.tools.map((tool, i) => <ToolCard key={i} tool={tool} />)}
+      </div>
+    </div>
+  );
+}
+
+function CategoryCard({ category, onClick, idx }) {
+  return (
+    <button onClick={onClick} className="cat-card" style={{ animationDelay: idx * 0.04 + "s" }}>
+      <div className="cat-bar" style={{ background: category.gradient }} />
+      <div className="cat-inner">
+        <div className="cat-icon" style={{ background: category.color + "10" }}>{category.icon}</div>
+        <div className="cat-text">
+          <div className="cat-name">{category.name}</div>
+          <div className="cat-sub">{category.subtitle}</div>
+        </div>
+        <div className="cat-count" style={{ background: category.color + "12", color: category.color }}>{category.tools.length}개</div>
+      </div>
+    </button>
+  );
+}
+
+function App() {
+  const [selected, setSelected] = useState(null);
+  const [search, setSearch] = useState("");
+  const totalTools = categories.reduce((a, c) => a + c.tools.length, 0);
+
+  const filteredTools = search.trim()
+    ? categories.flatMap(c => c.tools.filter(t =>
+        t.name.toLowerCase().includes(search.toLowerCase()) || t.desc.includes(search)
+      ).map(t => ({ ...t, category: c })))
+    : [];
+
+  const selectedCategory = selected ? categories.find(c => c.id === selected) : null;
+
+  useEffect(() => {
+    if (selected) window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [selected]);
+
+  return (
+    <div className="container">
+      <div className="hdr">
+        <div className="hdr-badge">
+          <span className="hdr-badge-ico">🤖</span> 친절한유성쌤이 추천하는
+        </div>
+        <h1 className="hdr-title">AI 도구 모음집 2026</h1>
+        <p className="hdr-stats">{categories.length}개 카테고리 · {totalTools}개 AI 도구</p>
+        <p className="hdr-sub">유쌤클래스 | AI콘텐츠마케팅연구소</p>
+      </div>
+
+      <div className="search-wrap">
+        <span className="search-ico">🔍</span>
+        <input
+          type="text" className="search-input"
+          placeholder="AI 도구 이름 또는 키워드 검색..."
+          value={search}
+          onChange={(e) => { setSearch(e.target.value); setSelected(null); }}
+        />
+      </div>
+
+      {search.trim() && !selected && (
+        <div style={{ animation: "fadeIn 0.3s ease" }}>
+          {filteredTools.length > 0 ? (
+            <React.Fragment>
+              <p style={{ fontSize: "13px", color: "#94A3B8", margin: "0 0 12px 4px" }}>
+                검색 결과 <strong style={{ color: "#0F172A" }}>{filteredTools.length}개</strong>
+              </p>
+              <div className="search-grid">
+                {filteredTools.map((tool, i) => (
+                  <div key={i} style={{ position: "relative" }}>
+                    <ToolCard tool={tool} />
+                    <span className="search-cat-tag" style={{ color: tool.category.color, background: tool.category.color + "10" }}>
+                      {tool.category.icon} {tool.category.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </React.Fragment>
+          ) : (
+            <div style={{ textAlign: "center", padding: "48px 0", color: "#94A3B8" }}>
+              <div style={{ fontSize: "40px", marginBottom: "12px" }}>🔍</div>
+              <p style={{ fontSize: "14px" }}>"{search}"에 대한 결과가 없습니다</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {!search.trim() && selectedCategory ? (
+        <CategoryDetail category={selectedCategory} onBack={() => setSelected(null)} />
+      ) : !search.trim() && (
+        <div className="cat-grid">
+          {categories.map((cat, i) => (
+            <CategoryCard key={cat.id} category={cat} onClick={() => setSelected(cat.id)} idx={i} />
+          ))}
+        </div>
+      )}
+
+      <div className="ftr">
+        <p>© 2026 친절한유성쌤 · 유쌤클래스<br/>AI 도구 정보 출처: 방송통신위원회 생성형AI 이용자 참여 플랫폼</p>
+        <div className="ftr-links">
+          <a href="https://yussamclass.com" target="_blank" rel="noopener noreferrer">yussamclass.com</a>
+          <a href="https://aicm.kr" target="_blank" rel="noopener noreferrer">aicm.kr</a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
