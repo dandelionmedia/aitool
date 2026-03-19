@@ -35,15 +35,20 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto 
 .hdr-title{font-size:36px;font-weight:900;letter-spacing:-0.04em;line-height:1.25;background:linear-gradient(135deg,#0F172A 0%,#4338CA 50%,#2563EB 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
 .hdr-stats{font-size:15.5px;color:var(--text-secondary);margin-bottom:5px;font-weight:500}
 .hdr-sub{font-size:13.5px;color:var(--text-tertiary);font-weight:500}
-
-/* ─── INTRO CARD ─── */
-.intro-card{max-width:680px;margin:0 auto 28px;background:linear-gradient(135deg,#EFF6FF 0%,#F5F3FF 50%,#FFF7ED 100%);border:1.5px solid #DBEAFE;border-radius:18px;padding:28px 32px;position:relative;overflow:hidden;animation:fadeIn .5s ease}
+.intro-card{max-width:680px;margin:0 auto 24px;background:linear-gradient(135deg,#EFF6FF 0%,#F5F3FF 50%,#FFF7ED 100%);border:1.5px solid #DBEAFE;border-radius:18px;padding:28px 32px;position:relative;overflow:hidden;animation:fadeIn .5s ease}
 .intro-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(37,99,235,.08) 0%,transparent 70%);border-radius:50%;pointer-events:none}
-.intro-card::after{content:'';position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(124,58,237,.06) 0%,transparent 70%);border-radius:50%;pointer-events:none}
 .intro-text{position:relative;z-index:1;font-size:15px;line-height:1.85;color:#1E293B;font-weight:450;word-break:keep-all}
 .intro-text .highlight{color:#2563EB;font-weight:700}
 .intro-text .emphasis{color:#7C3AED;font-weight:700}
 .intro-text .cta{display:inline-block;margin-top:10px;font-weight:750;color:#111827;font-size:15.5px}
+
+/* ─── SOCIAL LINKS ─── */
+.social-section{max-width:680px;margin:0 auto 28px;animation:fadeIn .6s ease}
+.social-grid{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.social-link{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:12px;text-decoration:none;transition:all .22s cubic-bezier(.4,0,.2,1);box-shadow:0 1px 2px rgba(0,0,0,.03);cursor:pointer}
+.social-link:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
+.social-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;color:#fff}
+.social-label{font-size:13px;font-weight:650;color:var(--text-primary);white-space:nowrap;letter-spacing:-0.01em}
 
 .search-wrap{position:relative;margin:0 auto 28px;max-width:600px}
 .search-ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-tertiary);pointer-events:none}
@@ -73,8 +78,7 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto 
 .info-toggle-label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--text-primary)}
 .info-toggle-arrow{transition:transform .3s}
 .info-panel{background:var(--card-bg);border:1.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.04);animation:fadeIn .3s ease}
-.info-section{margin-bottom:22px}
-.info-section:last-of-type{margin-bottom:0}
+.info-section{margin-bottom:22px}.info-section:last-of-type{margin-bottom:0}
 .info-section-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--border-light)}
 .info-section-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
 .info-section-title{font-weight:750;font-size:15px;color:var(--text-primary);letter-spacing:-0.01em}
@@ -104,7 +108,8 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto 
 @media(max-width:768px){
 .top-nav{padding:8px 16px}.home-btn{padding:7px 12px;font-size:13px}.top-nav-title{font-size:12px}
 .container{padding:0 16px 40px}.hdr{padding:28px 0 18px}.hdr-title{font-size:28px}.hdr-stats{font-size:14px}
-.intro-card{padding:22px 20px;margin:0 auto 22px;border-radius:14px}.intro-text{font-size:14px;line-height:1.8}.intro-text .cta{font-size:14.5px}
+.intro-card{padding:22px 20px;margin:0 auto 20px;border-radius:14px}.intro-text{font-size:14px;line-height:1.8}.intro-text .cta{font-size:14.5px}
+.social-section{margin:0 auto 22px}.social-grid{gap:6px}.social-link{padding:8px 12px;border-radius:10px}.social-icon{width:24px;height:24px;font-size:13px;border-radius:6px}.social-label{font-size:12px}
 .cat-grid{grid-template-columns:1fr;gap:10px}.cat-card{padding:18px}.cat-icon{width:46px;height:46px;font-size:23px;border-radius:12px}
 .tools-grid{grid-template-columns:1fr}.search-grid{grid-template-columns:1fr}
 .hero-banner{padding:26px;border-radius:16px}.hero-main-icon{font-size:40px}.hero-title{font-size:23px}.hero-concept{font-size:14px}.hero-bg-icon{font-size:110px;top:-20px;right:-10px}.info-panel{padding:22px}
@@ -112,6 +117,7 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto 
 @media(max-width:420px){
 .container{padding:0 14px 36px}.hdr{padding:22px 0 16px}.hdr-title{font-size:24px}.hdr-badge{font-size:12px;padding:5px 13px}
 .intro-card{padding:20px 18px;border-radius:12px}.intro-text{font-size:13.5px;line-height:1.75}.intro-text .cta{font-size:14px}
+.social-grid{gap:5px}.social-link{padding:7px 10px}.social-icon{width:22px;height:22px;font-size:12px;border-radius:6px}.social-label{font-size:11.5px}
 .search-input{padding:13px 14px 13px 42px;font-size:14px;border-radius:12px}
 .cat-card{padding:16px}.cat-icon{width:42px;height:42px;font-size:21px;border-radius:11px}.cat-name{font-size:15px}.cat-sub{font-size:12px}
 .hero-banner{padding:22px}.hero-main-icon{font-size:34px;margin-bottom:8px}.hero-title{font-size:21px}.hero-subtitle{font-size:13px}.hero-concept{font-size:13.5px;line-height:1.75;margin-top:12px}
@@ -130,6 +136,16 @@ body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto 
 <div id="root"></div>
 <script type="text/babel">
 const {useState,useEffect} = React;
+
+const socialLinks = [
+  {name:"홈페이지",url:"https://www.yussamclass.com",color:"#2563EB",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>},
+  {name:"블로그",url:"https://blog.naver.com/mindlemedia",color:"#03C75A",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M4 4h16v16H4V4zm3 3v4.5l3.5-2L14 12V7h3v10H7V7z"/></svg>},
+  {name:"유튜브",url:"https://www.youtube.com/c/kyseong3",color:"#FF0000",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1.12A69 69 0 0012 4a69 69 0 00-8.37.46 2.92 2.92 0 00-1.72 1.12A8.5 8.5 0 001 9.71a44.4 44.4 0 000 4.58 8.5 8.5 0 00.91 4.13 2.92 2.92 0 001.72 1.12A69 69 0 0012 20a69 69 0 008.37-.46 2.92 2.92 0 001.72-1.12 8.5 8.5 0 00.91-4.13 44.4 44.4 0 000-4.58zM9.74 14.85V8.55l5.57 3.15z"/></svg>},
+  {name:"인스타그램",url:"https://www.instagram.com/yussam_class",color:"#E4405F",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#fff" stroke="none"/></svg>},
+  {name:"오픈톡방",url:"https://open.kakao.com/o/g8m4i9ve",color:"#FEE500",iconColor:"#3C1E1E",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#3C1E1E"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.86 5.31 4.64 6.7l-.97 3.56c-.07.25.2.46.42.33l4.15-2.43c.57.07 1.15.11 1.76.11 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>},
+  {name:"페이스북",url:"https://www.facebook.com/dandelionmedia1004",color:"#1877F2",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>},
+  {name:"쓰레드",url:"https://www.threads.com/@yussam_class",color:"#000000",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12.186 24h-.007C5.449 24 .305 18.636.305 12S5.449 0 12.186 0c3.126 0 5.998 1.194 8.11 3.362l-2.724 2.59C16.126 4.476 14.2 3.6 12.186 3.6c-4.62 0-8.381 3.77-8.381 8.4s3.76 8.4 8.381 8.4c3.437 0 6.168-1.903 7.34-4.8h-7.34v-3.6h11.37c.109.596.163 1.2.163 1.8C23.72 19.353 18.627 24 12.186 24z"/></svg>},
+];
 
 const categories = [
   {
@@ -176,246 +192,41 @@ const categories = [
       {name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"한국 특화 디자인 템플릿+AI 이미지",badge:"국내"},
     ],
   },
-  {
-    id:"video", icon:"🎬", name:"영상 생성 AI", subtitle:"Text/Image to Video / AI 아바타",
-    color:"#DC2626", gradient:"linear-gradient(135deg,#B91C1C 0%,#F97316 100%)",
-    concept:"텍스트, 이미지, 음성 등 여러 형태의 데이터를 조합해 새로운 영상을 제작하는 생성형 AI입니다. 전문 편집 기술 없이도 아이디어만으로 영상을 만들 수 있습니다.",
-    features:["다양한 입력 기반 영상 생성 — 텍스트·이미지·음성을 조합한 영상 자동 제작","AI 아바타·캐릭터 구현 — 가상 인물이 텍스트에 맞춰 말하고 움직이는 영상"],
-    useCases:["마케팅·홍보 — 제품 소개, SNS 광고, 기업 홍보 영상","교육·정보 전달 — 직원 교육, 온라인 강의, 뉴스 브리핑","엔터테인먼트 — 애니메이션, 단편 영화, 뮤직비디오 초기 제작"],
-    cautions:["허위·조작 영상 — 딥페이크를 통한 가짜뉴스·평판 피해 위험","저작권·초상권 — 기존 영상 무단 활용·얼굴 합성 시 권리 침해","유해 콘텐츠 — 딥페이크의 범죄 악용, 발견 시 즉시 신고 필요"],
-    tools:[
-      {name:"Google Veo 3 (제미나이)",url:"https://deepmind.google/technologies/veo",desc:"구글, 영상+음성 동시 생성 시대를 개척",badge:"유쌤추천",alias:["제미나이","gemini","veo"]},
-      {name:"Google Flow",url:"https://flow.google/",desc:"구글 AI 영상 생성·편집 통합 도구",badge:"유쌤추천"},
-      {name:"OpenAI Sora 2",url:"https://openai.com/sora",desc:"실사급 60초+ 고품질 영상 생성"},
-      {name:"Kling 3 (클링)",url:"https://klingai.com/",desc:"사실적 물리법칙, Sora 넘었다는 평가",badge:"HOT"},
-      {name:"Runway Gen-4",url:"https://runwayml.com/",desc:"글로벌 1위, 영상 생성+편집 통합 플랫폼"},
-      {name:"Seedance 2 (바이트댄스)",url:"https://seedance.ai/",desc:"Sora·Veo 성능 넘어선 최신 모델",badge:"NEW"},
-      {name:"HaiLuo AI (하이루오)",url:"https://hailuoai.video/",desc:"중국 기반, 한국 사용자 증가세"},
-      {name:"Vidu (생수 테크놀로지)",url:"https://www.vidu.com/",desc:"중국 기반 비디오 생성 AI"},
-      {name:"Pika",url:"https://pika.art/",desc:"숏폼 영상 강점, 텍스트/이미지→영상"},
-      {name:"Luma Dream Machine",url:"https://lumalabs.ai/dream-machine",desc:"3D·영상 생성 전문"},
-      {name:"Synthesia",url:"https://www.synthesia.io/",desc:"AI 아바타 프레젠테이션 영상 1위",badge:"아바타"},
-      {name:"HeyGen",url:"https://www.heygen.com/",desc:"AI 아바타 마케팅·다국어 더빙",badge:"아바타"},
-      {name:"DeepBrain AI",url:"https://www.deepbrain.io/",desc:"국내 AI 아바타 플랫폼",badge:"국내"},
-    ],
-  },
-  {
-    id:"music", icon:"🎵", name:"음악 / 오디오 생성 AI", subtitle:"AI 작곡 / 음성 합성 / 나레이션",
-    color:"#7C3AED", gradient:"linear-gradient(135deg,#6D28D9 0%,#EC4899 100%)",
-    concept:"텍스트 설명이나 장르·분위기 등 간단한 조건만으로 완성도 높은 음악을 작곡·편곡하거나, 고품질 AI 음성·나레이션을 생성하는 AI입니다.",
-    features:["맞춤형 음악 작곡 — 장르, 악기, 템포, 분위기를 텍스트로 지정해 작곡","고품질 음성 합성(TTS) — 다양한 연령·성별 목소리 생성, 감정·톤 조절","음성 복제(Voice Cloning) — 짧은 음성 데이터로 특정인 목소리 학습·복제"],
-    useCases:["BGM 제작 — 유튜브, 광고, 게임, 팟캐스트 배경음악","나레이션·더빙 — 유튜브 내레이션, 교육 콘텐츠, 오디오북 더빙","음악 교육 — 이론 학습, 편곡 아이디어, 작곡 영감 도구"],
-    cautions:["창작자 권리 침해 — 기존 음악과 유사한 멜로디 생성 시 저작권 문제","인격권 침해 — 동의 없는 목소리 복제는 퍼블리시티권 침해","보이스피싱 악용 — 합성 음성의 범죄 활용 위험","표절·창작성 논란 — AI 음악의 독창성에 대한 사회적 논의 진행 중"],
-    tools:[
-      {name:"Suno AI (v4/v5)",url:"https://suno.ai/",desc:"가사 입력으로 K-Pop~발라드 완성곡 생성, 1위",badge:"유쌤추천"},
-      {name:"Udio",url:"https://www.udio.com/",desc:"음악적 완성도 최고, 인디 뮤지션들이 영감 도구로 활용",badge:"유쌤추천"},
-      {name:"ElevenLabs",url:"https://elevenlabs.io/",desc:"AI 음성 합성·더빙 1위, 유튜브 나레이션 필수",badge:"유쌤추천"},
-      {name:"타입캐스트 (TypeCast)",url:"https://typecast.ai/",desc:"한국어 AI 음성 특화, 교육·유튜브 더빙 인기",badge:"국내"},
-      {name:"포자랩스 (Viodio.io)",url:"https://viodio.io/",desc:"저작권 안전 고품질 음원, 광고 마케터 선호",badge:"국내"},
-      {name:"수퍼톤 (Supertone)",url:"https://supertone.ai/",desc:"한국어 음성 합성 강점, 국내 스타트업",badge:"국내"},
-      {name:"MusicFX (Google)",url:"https://aitestkitchen.withgoogle.com/tools/music-fx",desc:"구글 AI 음악 생성 실험 도구",alias:["제미나이"]},
-      {name:"Fish Audio",url:"https://fish.audio/",desc:"다국어 음성 복제·합성 플랫폼"},
-      {name:"OpenAI TTS",url:"https://platform.openai.com/docs/guides/text-to-speech",desc:"OpenAI 고품질 텍스트→음성 변환"},
-      {name:"Murf AI",url:"https://murf.ai/",desc:"비즈니스 나레이션·프레젠테이션 특화"},
-      {name:"AIVA",url:"https://aiva.ai/",desc:"클래식·영화음악 작곡 전문"},
-      {name:"SOUNDRAW",url:"https://soundraw.io/",desc:"커스텀 BGM 생성·편집"},
-      {name:"PlayHT",url:"https://play.ht/",desc:"AI 음성 API·팟캐스트 변환"},
-    ],
-  },
-  {
-    id:"editing", icon:"🎞️", name:"영상 편집 / 숏폼 제작", subtitle:"AI 편집 / 자막 / 숏폼",
-    color:"#0D9488", gradient:"linear-gradient(135deg,#0F766E 0%,#34D399 100%)",
-    concept:"AI 기술을 활용해 영상 편집, 자막 생성, 음성 삽입, 숏폼 콘텐츠 제작을 빠르고 쉽게 도와주는 도구입니다. 전문 편집 기술 없이도 고품질 콘텐츠를 만들 수 있습니다.",
-    features:["AI 자동 자막 — 음성 인식 기반 자동 자막 생성 및 다국어 번역","숏폼 최적화 — 릴스, 쇼츠, 틱톡에 최적화된 세로형 편집·리프레임","스크립트 기반 편집 — 텍스트를 편집하면 영상이 자동으로 편집되는 방식"],
-    useCases:["유튜브·SNS — 영상 콘텐츠 편집, 자막 삽입, 효과 적용","숏폼 제작 — 릴스, 쇼츠, 틱톡 영상 빠르게 제작","교육 영상 — 강의 녹화 편집, AI 음성 더빙, 자막 번역"],
-    cautions:["저작권 — 배경음악, 효과음 등 소스 라이선스 확인 필요","품질 한계 — AI 자동 편집은 세밀한 연출에 한계가 있을 수 있음","의존성 — 특정 플랫폼 종속 시 전환 비용 발생 가능"],
-    tools:[
-      {name:"CapCut (캡컷)",url:"https://www.capcut.com/",desc:"숏폼 1위, 자동 자막 정확도·스타일 옵션 압도적",badge:"유쌤추천"},
-      {name:"VREW (브루)",url:"https://vrew.voyagerx.com/",desc:"한국인 최애, AI 자막+음성 삽입 숏폼 표준",badge:"유쌤추천"},
-      {name:"Adobe Premiere Pro",url:"https://www.adobe.com/products/premiere.html",desc:"전문가용, AI Sensei 자동 컷·리프레임 통합",badge:"유쌤추천"},
-      {name:"Descript",url:"https://www.descript.com/",desc:"스크립트 기반 편집, 텍스트 수정=영상 편집"},
-      {name:"Filmora",url:"https://filmora.wondershare.com/",desc:"AI 편집 기능 탑재, 초보자 친화적"},
-      {name:"Meta Edits",url:"https://about.instagram.com/blog/announcements/introducing-edits",desc:"메타 출시, 캡컷 대항마 숏폼 도구",badge:"NEW"},
-      {name:"Fliki",url:"https://fliki.ai/",desc:"텍스트→비디오+음성 변환 AI 숏폼 도구"},
-      {name:"InVideo AI",url:"https://invideo.io/",desc:"프롬프트로 영상 자동 생성·편집"},
-      {name:"Vizard",url:"https://vizard.ai/",desc:"롱폼→숏폼 자동 클립 추출·편집"},
-      {name:"Kapwing",url:"https://www.kapwing.com/",desc:"웹 기반 AI 영상 편집·자막·리사이즈"},
-      {name:"Pictory",url:"https://pictory.ai/",desc:"긴 글·블로그를 숏폼 영상으로 변환"},
-      {name:"Canva Video",url:"https://www.canva.com/",desc:"간편 영상 제작·편집·디자인 통합"},
-    ],
-  },
-  {
-    id:"presentation", icon:"📊", name:"프레젠테이션 / 문서 생성", subtitle:"AI PPT / 보고서 / 리서치",
-    color:"#0369A1", gradient:"linear-gradient(135deg,#075985 0%,#38BDF8 100%)",
-    concept:"프롬프트만으로 프레젠테이션을 자동 생성하거나, AI가 자율적으로 리서치·보고서 작성까지 수행하는 도구입니다. 업무 생산성을 획기적으로 높여줍니다.",
-    features:["프레젠테이션 자동 생성 — 텍스트 입력만으로 슬라이드 구성·디자인 완성","AI 리서치·보고서 — 주제 입력 시 자료 수집·분석·문서화 자동 수행","인포그래픽 자동화 — 텍스트를 시각적 다이어그램·차트로 자동 변환"],
-    useCases:["프레젠테이션 — 기업 발표, 교육 자료, 제안서 빠른 제작","보고서·리서치 — AI가 자율적으로 조사·분석·문서 작성","문서 자동화 — 반복적인 보고서, 기획안, 제안서 초안 생성"],
-    cautions:["정확성 검증 — AI가 생성한 데이터·통계는 반드시 팩트체크 필요","디자인 한계 — 자동 생성 디자인이 브랜드 가이드에 맞지 않을 수 있음","보안 — 내부 기밀 자료를 AI에 입력할 때 유출 주의"],
-    tools:[
-      {name:"Manus AI",url:"https://manus.im/",desc:"자율형 AI 에이전트, 리서치→보고서 자동 작성",badge:"유쌤추천"},
-      {name:"Skywork AI",url:"https://skywork.ai/",desc:"AI 자동 프레젠테이션·문서 생성",badge:"유쌤추천"},
-      {name:"Gamma AI",url:"https://gamma.app/",desc:"'PPT 파괴자', 프롬프트→프레젠테이션 1분 완성",badge:"유쌤추천"},
-      {name:"Beautiful.ai",url:"https://www.beautiful.ai/",desc:"AI 기반 슬라이드 디자인 자동화"},
-      {name:"Napkin AI",url:"https://www.napkin.ai/",desc:"텍스트→인포그래픽·다이어그램 자동 변환",badge:"NEW"},
-      {name:"Microsoft 365 Copilot",url:"https://copilot.microsoft.com/",desc:"엑셀·워드·PPT 내 직접 작동, 기업용 최다 보급"},
-      {name:"Google Gemini (Slides/제미나이)",url:"https://gemini.google.com/",desc:"구글 슬라이드 연동 AI 프레젠테이션",alias:["제미나이","gemini"]},
-      {name:"Canva Docs/PPT",url:"https://www.canva.com/",desc:"디자인+문서·슬라이드 AI 자동 생성"},
-      {name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"카드뉴스·썸네일·상세페이지 한국 특화 템플릿",badge:"국내"},
-      {name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"문서 초안·정리·요약·지식 관리 통합"},
-    ],
-  },
-  {
-    id:"allinone", icon:"🌐", name:"올인원 AI 플랫폼", subtitle:"통합 AI / 멀티모달",
-    color:"#4F46E5", gradient:"linear-gradient(135deg,#3730A3 0%,#06B6D4 100%)",
-    concept:"텍스트, 이미지, 음성 등 여러 유형의 데이터를 동시에 이해하고 새로운 결과물을 만들어내는 차세대 생성형 AI입니다. 하나의 플랫폼에서 여러 기능을 통합적으로 사용할 수 있습니다.",
-    features:["복합 데이터 처리 — 음성+이미지 동시 이해, 텍스트·영상·음성 결과 제공","상황 인지·추론 — 대화 맥락, 감정, 환경을 종합 분석해 개인화된 결과","다중 AI 모델 통합 — 하나의 플랫폼에서 여러 AI 모델을 선택적으로 활용"],
-    useCases:["차세대 스마트 비서 — 음성 인식 + 이미지 파악 + 텍스트/음성 안내","실감형 콘텐츠 — 스토리를 이미지·음악·나레이션으로 자동 변환","지능형 교육 — 학습자 반응 인식, 난이도 자동 조절"],
-    cautions:["편향 증폭 — 각 데이터의 편향이 결합되어 차별적 표현 강화 가능","정교한 허위정보 — 텍스트+음성+영상 결합 딥페이크는 탐지가 매우 어려움","프라이버시 침해 — 다양한 데이터를 합쳐 개인 감정·사적 정보 추론 가능"],
-    tools:[
-      {name:"젠스파크 (GenSpark)",url:"https://genspark.ai/",desc:"AI 에이전트 기반 올인원 검색·생성 플랫폼",badge:"유쌤추천"},
-      {name:"ChatGPT (멀티모달)",url:"https://chat.openai.com/",desc:"텍스트·이미지·코딩·파일분석 모든 것을 하나로"},
-      {name:"Google Gemini (제미나이)",url:"https://gemini.google.com/",desc:"검색·문서·모바일 연동 통합 에이전트",alias:["제미나이","gemini"]},
-      {name:"Claude",url:"https://claude.ai/",desc:"텍스트·코딩·대용량 파일 분석 통합"},
-      {name:"뤼튼 (Wrtn)",url:"https://wrtn.ai/",desc:"한국 'AI 포털', 월 500만 사용자, 여러 모델 무료",badge:"국내"},
-      {name:"캐럿 (Carat)",url:"https://www.carat.im/",desc:"글쓰기·이미지·영상·음악 한곳에서 제작",badge:"국내"},
-      {name:"Perplexity",url:"https://www.perplexity.ai/",desc:"검색형 AI 선두, 정보 요약+출처 제시"},
-      {name:"Canva",url:"https://www.canva.com/",desc:"디자인+영상+문서+AI 올인원 통합"},
-      {name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"한국 특화 디자인+AI 통합 플랫폼",badge:"국내"},
-      {name:"Microsoft Copilot",url:"https://copilot.microsoft.com/",desc:"M365 전체 업무 통합 멀티모달"},
-      {name:"NAVER 클로바X",url:"https://clova.ai/",desc:"네이버 한국어 멀티모달 AI",badge:"국내"},
-      {name:"A. (A dot)",url:"https://adot.ai/",desc:"SK 멀티모달 AI 비서",badge:"국내"},
-    ],
-  },
-  {
-    id:"agent", icon:"🤖", name:"업무 자동화 / AI 에이전트", subtitle:"자동화 / 바이브코딩 / 에이전트",
-    color:"#EA580C", gradient:"linear-gradient(135deg,#C2410C 0%,#FACC15 100%)",
-    concept:"사용자의 지시를 받아 스스로 계획을 세우고 여러 도구를 연결·실행하여 복잡한 작업을 자율적으로 수행하는 AI입니다. 2026년 기업용 앱의 약 40%에 AI 에이전트가 탑재될 전망입니다.",
-    features:["자율형 작업 수행 — 목표를 이해하고 스스로 단계별 계획을 세워 실행","다중 앱 연동 — 이메일, 캘린더, 문서, 메신저 등 여러 도구를 연결","바이브코딩 — AI와 대화만으로 웹페이지·업무 도구를 직접 제작"],
-    useCases:["업무 자동화 — 반복 업무 제거, 워크플로우 자동 연결","앱·웹 개발 — 코딩 없이 AI 대화로 서비스 제작 (바이브코딩)","데이터 처리 — 여러 소스의 데이터를 수집·분석·보고서화"],
-    cautions:["보안 위험 — 자율 실행 중 민감한 데이터 접근·유출 가능성","오류 전파 — 잘못된 판단이 연쇄적으로 작업에 영향을 미칠 수 있음","과도한 의존 — AI 에이전트에 대한 과도한 의존은 업무 이해력 저하 우려"],
-    tools:[
-      {name:"Make (구 Integromat)",url:"https://www.make.com/",desc:"노코드 비주얼 고급 자동화 플랫폼",badge:"유쌤추천"},
-      {name:"n8n",url:"https://n8n.io/",desc:"오픈소스 워크플로우 자동화, 개발자형",badge:"유쌤추천"},
-      {name:"Zapier AI",url:"https://zapier.com/",desc:"가장 대중적 앱 간 자동화, 5,000+ 연동"},
-      {name:"Coze (코즈)",url:"https://www.coze.com/",desc:"코딩 없이 나만의 AI 봇 제작·배포, 에이전트 열풍 주도",badge:"HOT"},
-      {name:"Manus AI",url:"https://manus.im/",desc:"자율형 에이전트, 작업 수행형 AI"},
-      {name:"Claude Code / Cowork",url:"https://claude.ai/",desc:"파일 접근·데이터 분석·병렬 처리 에이전트"},
-      {name:"ChatGPT Custom GPTs",url:"https://chat.openai.com/",desc:"맞춤형 AI 봇 직접 제작·공유"},
-      {name:"Cursor",url:"https://cursor.sh/",desc:"AI 코드 에디터, 바이브코딩 대표",badge:"HOT"},
-      {name:"Replit Agent",url:"https://replit.com/",desc:"대화로 앱 제작 바이브코딩 플랫폼"},
-      {name:"MS Power Automate + Copilot",url:"https://powerautomate.microsoft.com/",desc:"M365 업무 통합 자동화+AI 에이전트"},
-      {name:"Google Workspace + Gemini",url:"https://workspace.google.com/",desc:"AppSheet·Apps Script+Gemini 자동화",alias:["제미나이","gemini"]},
-      {name:"AutoGen (Microsoft)",url:"https://github.com/microsoft/autogen",desc:"멀티 에이전트 프레임워크 오픈소스"},
-    ],
-  },
+  {id:"video",icon:"🎬",name:"영상 생성 AI",subtitle:"Text/Image to Video / AI 아바타",color:"#DC2626",gradient:"linear-gradient(135deg,#B91C1C 0%,#F97316 100%)",concept:"텍스트, 이미지, 음성 등 여러 형태의 데이터를 조합해 새로운 영상을 제작하는 생성형 AI입니다.",features:["다양한 입력 기반 영상 생성 — 텍스트·이미지·음성을 조합한 영상 자동 제작","AI 아바타·캐릭터 구현 — 가상 인물이 텍스트에 맞춰 말하고 움직이는 영상"],useCases:["마케팅·홍보 — 제품 소개, SNS 광고, 기업 홍보 영상","교육·정보 전달 — 직원 교육, 온라인 강의, 뉴스 브리핑","엔터테인먼트 — 애니메이션, 단편 영화, 뮤직비디오 초기 제작"],cautions:["허위·조작 영상 — 딥페이크를 통한 가짜뉴스·평판 피해 위험","저작권·초상권 — 기존 영상 무단 활용·얼굴 합성 시 권리 침해","유해 콘텐츠 — 딥페이크의 범죄 악용, 발견 시 즉시 신고 필요"],tools:[{name:"Google Veo 3 (제미나이)",url:"https://deepmind.google/technologies/veo",desc:"구글, 영상+음성 동시 생성 시대를 개척",badge:"유쌤추천",alias:["제미나이","gemini","veo"]},{name:"Google Flow",url:"https://flow.google/",desc:"구글 AI 영상 생성·편집 통합 도구",badge:"유쌤추천"},{name:"OpenAI Sora 2",url:"https://openai.com/sora",desc:"실사급 60초+ 고품질 영상 생성"},{name:"Kling 3 (클링)",url:"https://klingai.com/",desc:"사실적 물리법칙, Sora 넘었다는 평가",badge:"HOT"},{name:"Runway Gen-4",url:"https://runwayml.com/",desc:"글로벌 1위, 영상 생성+편집 통합 플랫폼"},{name:"Seedance 2 (바이트댄스)",url:"https://seedance.ai/",desc:"Sora·Veo 성능 넘어선 최신 모델",badge:"NEW"},{name:"HaiLuo AI (하이루오)",url:"https://hailuoai.video/",desc:"중국 기반, 한국 사용자 증가세"},{name:"Vidu (생수 테크놀로지)",url:"https://www.vidu.com/",desc:"중국 기반 비디오 생성 AI"},{name:"Pika",url:"https://pika.art/",desc:"숏폼 영상 강점, 텍스트/이미지→영상"},{name:"Luma Dream Machine",url:"https://lumalabs.ai/dream-machine",desc:"3D·영상 생성 전문"},{name:"Synthesia",url:"https://www.synthesia.io/",desc:"AI 아바타 프레젠테이션 영상 1위",badge:"아바타"},{name:"HeyGen",url:"https://www.heygen.com/",desc:"AI 아바타 마케팅·다국어 더빙",badge:"아바타"},{name:"DeepBrain AI",url:"https://www.deepbrain.io/",desc:"국내 AI 아바타 플랫폼",badge:"국내"}]},
+  {id:"music",icon:"🎵",name:"음악 / 오디오 생성 AI",subtitle:"AI 작곡 / 음성 합성 / 나레이션",color:"#7C3AED",gradient:"linear-gradient(135deg,#6D28D9 0%,#EC4899 100%)",concept:"텍스트 설명이나 장르·분위기 등 간단한 조건만으로 완성도 높은 음악을 작곡·편곡하거나, 고품질 AI 음성·나레이션을 생성하는 AI입니다.",features:["맞춤형 음악 작곡 — 장르, 악기, 템포, 분위기를 텍스트로 지정해 작곡","고품질 음성 합성(TTS) — 다양한 연령·성별 목소리 생성, 감정·톤 조절","음성 복제(Voice Cloning) — 짧은 음성 데이터로 특정인 목소리 학습·복제"],useCases:["BGM 제작 — 유튜브, 광고, 게임, 팟캐스트 배경음악","나레이션·더빙 — 유튜브 내레이션, 교육 콘텐츠, 오디오북 더빙","음악 교육 — 이론 학습, 편곡 아이디어, 작곡 영감 도구"],cautions:["창작자 권리 침해 — 기존 음악과 유사한 멜로디 생성 시 저작권 문제","인격권 침해 — 동의 없는 목소리 복제는 퍼블리시티권 침해","보이스피싱 악용 — 합성 음성의 범죄 활용 위험","표절·창작성 논란 — AI 음악의 독창성에 대한 사회적 논의 진행 중"],tools:[{name:"Suno AI (v4/v5)",url:"https://suno.ai/",desc:"가사 입력으로 K-Pop~발라드 완성곡 생성, 1위",badge:"유쌤추천"},{name:"Udio",url:"https://www.udio.com/",desc:"음악적 완성도 최고, 인디 뮤지션들이 영감 도구로 활용",badge:"유쌤추천"},{name:"ElevenLabs",url:"https://elevenlabs.io/",desc:"AI 음성 합성·더빙 1위, 유튜브 나레이션 필수",badge:"유쌤추천"},{name:"타입캐스트 (TypeCast)",url:"https://typecast.ai/",desc:"한국어 AI 음성 특화, 교육·유튜브 더빙 인기",badge:"국내"},{name:"포자랩스 (Viodio.io)",url:"https://viodio.io/",desc:"저작권 안전 고품질 음원, 광고 마케터 선호",badge:"국내"},{name:"수퍼톤 (Supertone)",url:"https://supertone.ai/",desc:"한국어 음성 합성 강점, 국내 스타트업",badge:"국내"},{name:"MusicFX (Google)",url:"https://aitestkitchen.withgoogle.com/tools/music-fx",desc:"구글 AI 음악 생성 실험 도구",alias:["제미나이"]},{name:"Fish Audio",url:"https://fish.audio/",desc:"다국어 음성 복제·합성 플랫폼"},{name:"OpenAI TTS",url:"https://platform.openai.com/docs/guides/text-to-speech",desc:"OpenAI 고품질 텍스트→음성 변환"},{name:"Murf AI",url:"https://murf.ai/",desc:"비즈니스 나레이션·프레젠테이션 특화"},{name:"AIVA",url:"https://aiva.ai/",desc:"클래식·영화음악 작곡 전문"},{name:"SOUNDRAW",url:"https://soundraw.io/",desc:"커스텀 BGM 생성·편집"},{name:"PlayHT",url:"https://play.ht/",desc:"AI 음성 API·팟캐스트 변환"}]},
+  {id:"editing",icon:"🎞️",name:"영상 편집 / 숏폼 제작",subtitle:"AI 편집 / 자막 / 숏폼",color:"#0D9488",gradient:"linear-gradient(135deg,#0F766E 0%,#34D399 100%)",concept:"AI 기술을 활용해 영상 편집, 자막 생성, 음성 삽입, 숏폼 콘텐츠 제작을 빠르고 쉽게 도와주는 도구입니다.",features:["AI 자동 자막 — 음성 인식 기반 자동 자막 생성 및 다국어 번역","숏폼 최적화 — 릴스, 쇼츠, 틱톡에 최적화된 세로형 편집·리프레임","스크립트 기반 편집 — 텍스트를 편집하면 영상이 자동으로 편집되는 방식"],useCases:["유튜브·SNS — 영상 콘텐츠 편집, 자막 삽입, 효과 적용","숏폼 제작 — 릴스, 쇼츠, 틱톡 영상 빠르게 제작","교육 영상 — 강의 녹화 편집, AI 음성 더빙, 자막 번역"],cautions:["저작권 — 배경음악, 효과음 등 소스 라이선스 확인 필요","품질 한계 — AI 자동 편집은 세밀한 연출에 한계가 있을 수 있음","의존성 — 특정 플랫폼 종속 시 전환 비용 발생 가능"],tools:[{name:"CapCut (캡컷)",url:"https://www.capcut.com/",desc:"숏폼 1위, 자동 자막 정확도·스타일 옵션 압도적",badge:"유쌤추천"},{name:"VREW (브루)",url:"https://vrew.voyagerx.com/",desc:"한국인 최애, AI 자막+음성 삽입 숏폼 표준",badge:"유쌤추천"},{name:"Adobe Premiere Pro",url:"https://www.adobe.com/products/premiere.html",desc:"전문가용, AI Sensei 자동 컷·리프레임 통합",badge:"유쌤추천"},{name:"Descript",url:"https://www.descript.com/",desc:"스크립트 기반 편집, 텍스트 수정=영상 편집"},{name:"Filmora",url:"https://filmora.wondershare.com/",desc:"AI 편집 기능 탑재, 초보자 친화적"},{name:"Meta Edits",url:"https://about.instagram.com/blog/announcements/introducing-edits",desc:"메타 출시, 캡컷 대항마 숏폼 도구",badge:"NEW"},{name:"Fliki",url:"https://fliki.ai/",desc:"텍스트→비디오+음성 변환 AI 숏폼 도구"},{name:"InVideo AI",url:"https://invideo.io/",desc:"프롬프트로 영상 자동 생성·편집"},{name:"Vizard",url:"https://vizard.ai/",desc:"롱폼→숏폼 자동 클립 추출·편집"},{name:"Kapwing",url:"https://www.kapwing.com/",desc:"웹 기반 AI 영상 편집·자막·리사이즈"},{name:"Pictory",url:"https://pictory.ai/",desc:"긴 글·블로그를 숏폼 영상으로 변환"},{name:"Canva Video",url:"https://www.canva.com/",desc:"간편 영상 제작·편집·디자인 통합"}]},
+  {id:"presentation",icon:"📊",name:"프레젠테이션 / 문서 생성",subtitle:"AI PPT / 보고서 / 리서치",color:"#0369A1",gradient:"linear-gradient(135deg,#075985 0%,#38BDF8 100%)",concept:"프롬프트만으로 프레젠테이션을 자동 생성하거나, AI가 자율적으로 리서치·보고서 작성까지 수행하는 도구입니다.",features:["프레젠테이션 자동 생성 — 텍스트 입력만으로 슬라이드 구성·디자인 완성","AI 리서치·보고서 — 주제 입력 시 자료 수집·분석·문서화 자동 수행","인포그래픽 자동화 — 텍스트를 시각적 다이어그램·차트로 자동 변환"],useCases:["프레젠테이션 — 기업 발표, 교육 자료, 제안서 빠른 제작","보고서·리서치 — AI가 자율적으로 조사·분석·문서 작성","문서 자동화 — 반복적인 보고서, 기획안, 제안서 초안 생성"],cautions:["정확성 검증 — AI가 생성한 데이터·통계는 반드시 팩트체크 필요","디자인 한계 — 자동 생성 디자인이 브랜드 가이드에 맞지 않을 수 있음","보안 — 내부 기밀 자료를 AI에 입력할 때 유출 주의"],tools:[{name:"Manus AI",url:"https://manus.im/",desc:"자율형 AI 에이전트, 리서치→보고서 자동 작성",badge:"유쌤추천"},{name:"Skywork AI",url:"https://skywork.ai/",desc:"AI 자동 프레젠테이션·문서 생성",badge:"유쌤추천"},{name:"Gamma AI",url:"https://gamma.app/",desc:"'PPT 파괴자', 프롬프트→프레젠테이션 1분 완성",badge:"유쌤추천"},{name:"Beautiful.ai",url:"https://www.beautiful.ai/",desc:"AI 기반 슬라이드 디자인 자동화"},{name:"Napkin AI",url:"https://www.napkin.ai/",desc:"텍스트→인포그래픽·다이어그램 자동 변환",badge:"NEW"},{name:"Microsoft 365 Copilot",url:"https://copilot.microsoft.com/",desc:"엑셀·워드·PPT 내 직접 작동, 기업용 최다 보급"},{name:"Google Gemini (Slides/제미나이)",url:"https://gemini.google.com/",desc:"구글 슬라이드 연동 AI 프레젠테이션",alias:["제미나이","gemini"]},{name:"Canva Docs/PPT",url:"https://www.canva.com/",desc:"디자인+문서·슬라이드 AI 자동 생성"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"카드뉴스·썸네일·상세페이지 한국 특화 템플릿",badge:"국내"},{name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"문서 초안·정리·요약·지식 관리 통합"}]},
+  {id:"allinone",icon:"🌐",name:"올인원 AI 플랫폼",subtitle:"통합 AI / 멀티모달",color:"#4F46E5",gradient:"linear-gradient(135deg,#3730A3 0%,#06B6D4 100%)",concept:"텍스트, 이미지, 음성 등 여러 유형의 데이터를 동시에 이해하고 새로운 결과물을 만들어내는 차세대 생성형 AI입니다.",features:["복합 데이터 처리 — 음성+이미지 동시 이해, 텍스트·영상·음성 결과 제공","상황 인지·추론 — 대화 맥락, 감정, 환경을 종합 분석해 개인화된 결과","다중 AI 모델 통합 — 하나의 플랫폼에서 여러 AI 모델을 선택적으로 활용"],useCases:["차세대 스마트 비서 — 음성 인식 + 이미지 파악 + 텍스트/음성 안내","실감형 콘텐츠 — 스토리를 이미지·음악·나레이션으로 자동 변환","지능형 교육 — 학습자 반응 인식, 난이도 자동 조절"],cautions:["편향 증폭 — 각 데이터의 편향이 결합되어 차별적 표현 강화 가능","정교한 허위정보 — 텍스트+음성+영상 결합 딥페이크는 탐지가 매우 어려움","프라이버시 침해 — 다양한 데이터를 합쳐 개인 감정·사적 정보 추론 가능"],tools:[{name:"젠스파크 (GenSpark)",url:"https://genspark.ai/",desc:"AI 에이전트 기반 올인원 검색·생성 플랫폼",badge:"유쌤추천"},{name:"ChatGPT (멀티모달)",url:"https://chat.openai.com/",desc:"텍스트·이미지·코딩·파일분석 모든 것을 하나로"},{name:"Google Gemini (제미나이)",url:"https://gemini.google.com/",desc:"검색·문서·모바일 연동 통합 에이전트",alias:["제미나이","gemini"]},{name:"Claude",url:"https://claude.ai/",desc:"텍스트·코딩·대용량 파일 분석 통합"},{name:"뤼튼 (Wrtn)",url:"https://wrtn.ai/",desc:"한국 'AI 포털', 월 500만 사용자, 여러 모델 무료",badge:"국내"},{name:"캐럿 (Carat)",url:"https://www.carat.im/",desc:"글쓰기·이미지·영상·음악 한곳에서 제작",badge:"국내"},{name:"Perplexity",url:"https://www.perplexity.ai/",desc:"검색형 AI 선두, 정보 요약+출처 제시"},{name:"Canva",url:"https://www.canva.com/",desc:"디자인+영상+문서+AI 올인원 통합"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"한국 특화 디자인+AI 통합 플랫폼",badge:"국내"},{name:"Microsoft Copilot",url:"https://copilot.microsoft.com/",desc:"M365 전체 업무 통합 멀티모달"},{name:"NAVER 클로바X",url:"https://clova.ai/",desc:"네이버 한국어 멀티모달 AI",badge:"국내"},{name:"A. (A dot)",url:"https://adot.ai/",desc:"SK 멀티모달 AI 비서",badge:"국내"}]},
+  {id:"agent",icon:"🤖",name:"업무 자동화 / AI 에이전트",subtitle:"자동화 / 바이브코딩 / 에이전트",color:"#EA580C",gradient:"linear-gradient(135deg,#C2410C 0%,#FACC15 100%)",concept:"사용자의 지시를 받아 스스로 계획을 세우고 여러 도구를 연결·실행하여 복잡한 작업을 자율적으로 수행하는 AI입니다. 2026년 기업용 앱의 약 40%에 AI 에이전트가 탑재될 전망입니다.",features:["자율형 작업 수행 — 목표를 이해하고 스스로 단계별 계획을 세워 실행","다중 앱 연동 — 이메일, 캘린더, 문서, 메신저 등 여러 도구를 연결","바이브코딩 — AI와 대화만으로 웹페이지·업무 도구를 직접 제작"],useCases:["업무 자동화 — 반복 업무 제거, 워크플로우 자동 연결","앱·웹 개발 — 코딩 없이 AI 대화로 서비스 제작 (바이브코딩)","데이터 처리 — 여러 소스의 데이터를 수집·분석·보고서화"],cautions:["보안 위험 — 자율 실행 중 민감한 데이터 접근·유출 가능성","오류 전파 — 잘못된 판단이 연쇄적으로 작업에 영향을 미칠 수 있음","과도한 의존 — AI 에이전트에 대한 과도한 의존은 업무 이해력 저하 우려"],tools:[{name:"Make (구 Integromat)",url:"https://www.make.com/",desc:"노코드 비주얼 고급 자동화 플랫폼",badge:"유쌤추천"},{name:"n8n",url:"https://n8n.io/",desc:"오픈소스 워크플로우 자동화, 개발자형",badge:"유쌤추천"},{name:"Zapier AI",url:"https://zapier.com/",desc:"가장 대중적 앱 간 자동화, 5,000+ 연동"},{name:"Coze (코즈)",url:"https://www.coze.com/",desc:"코딩 없이 나만의 AI 봇 제작·배포, 에이전트 열풍 주도",badge:"HOT"},{name:"Manus AI",url:"https://manus.im/",desc:"자율형 에이전트, 작업 수행형 AI"},{name:"Claude Code / Cowork",url:"https://claude.ai/",desc:"파일 접근·데이터 분석·병렬 처리 에이전트"},{name:"ChatGPT Custom GPTs",url:"https://chat.openai.com/",desc:"맞춤형 AI 봇 직접 제작·공유"},{name:"Cursor",url:"https://cursor.sh/",desc:"AI 코드 에디터, 바이브코딩 대표",badge:"HOT"},{name:"Replit Agent",url:"https://replit.com/",desc:"대화로 앱 제작 바이브코딩 플랫폼"},{name:"MS Power Automate + Copilot",url:"https://powerautomate.microsoft.com/",desc:"M365 업무 통합 자동화+AI 에이전트"},{name:"Google Workspace + Gemini",url:"https://workspace.google.com/",desc:"AppSheet·Apps Script+Gemini 자동화",alias:["제미나이","gemini"]},{name:"AutoGen (Microsoft)",url:"https://github.com/microsoft/autogen",desc:"멀티 에이전트 프레임워크 오픈소스"}]},
 ];
 
-const badgeStyles = {
-  "유쌤추천":{bg:"#FEF3C7",text:"#B45309",border:"#FDE68A",icon:"⭐"},
-  "국내":{bg:"#DBEAFE",text:"#1D4ED8",border:"#BFDBFE",icon:"🇰🇷"},
-  "NEW":{bg:"#FCE7F3",text:"#BE185D",border:"#FBCFE8",icon:"✨"},
-  "HOT":{bg:"#FEE2E2",text:"#B91C1C",border:"#FECACA",icon:"🔥"},
-  "아바타":{bg:"#EDE9FE",text:"#6D28D9",border:"#DDD6FE",icon:"🧑"},
-};
+const badgeStyles = {"유쌤추천":{bg:"#FEF3C7",text:"#B45309",border:"#FDE68A",icon:"⭐"},"국내":{bg:"#DBEAFE",text:"#1D4ED8",border:"#BFDBFE",icon:"🇰🇷"},"NEW":{bg:"#FCE7F3",text:"#BE185D",border:"#FBCFE8",icon:"✨"},"HOT":{bg:"#FEE2E2",text:"#B91C1C",border:"#FECACA",icon:"🔥"},"아바타":{bg:"#EDE9FE",text:"#6D28D9",border:"#DDD6FE",icon:"🧑"}};
 
-function matchSearch(tool, query) {
-  const q = query.toLowerCase();
-  if (tool.name.toLowerCase().includes(q)) return true;
-  if (tool.desc.toLowerCase().includes(q)) return true;
-  if (tool.alias && tool.alias.some(a => a.toLowerCase().includes(q))) return true;
-  return false;
-}
+function matchSearch(tool,q){const s=q.toLowerCase();return tool.name.toLowerCase().includes(s)||tool.desc.toLowerCase().includes(s)||(tool.alias&&tool.alias.some(a=>a.toLowerCase().includes(s)))}
 
-function ToolCard({tool}) {
-  const badge = tool.badge ? badgeStyles[tool.badge] || badgeStyles["유쌤추천"] : null;
-  return (
-    <a href={tool.url} target="_blank" rel="noopener noreferrer" className="tool-card">
-      <div style={{paddingRight:"24px"}}>
-        <div className="tool-name-row">
-          <span className="tool-name">{tool.name}</span>
-          {badge && <span className="tool-badge" style={{background:badge.bg,color:badge.text,borderColor:badge.border}}>{badge.icon} {tool.badge}</span>}
-        </div>
-        <p className="tool-desc">{tool.desc}</p>
-      </div>
-      <span className="tool-arrow">↗</span>
-    </a>
-  );
-}
+function ToolCard({tool}){const badge=tool.badge?badgeStyles[tool.badge]||badgeStyles["유쌤추천"]:null;return(<a href={tool.url} target="_blank" rel="noopener noreferrer" className="tool-card"><div style={{paddingRight:"24px"}}><div className="tool-name-row"><span className="tool-name">{tool.name}</span>{badge&&<span className="tool-badge" style={{background:badge.bg,color:badge.text,borderColor:badge.border}}>{badge.icon} {tool.badge}</span>}</div><p className="tool-desc">{tool.desc}</p></div><span className="tool-arrow">↗</span></a>)}
 
-function InfoPanel({title,items,icon,color}) {
-  return (
-    <div className="info-section">
-      <div className="info-section-header">
-        <span className="info-section-icon" style={{background:color+"14"}}>{icon}</span>
-        <span className="info-section-title">{title}</span>
-      </div>
-      <div className="info-items">
-        {items.map((item,i) => {
-          const parts = item.split(" — ");
-          return (<div key={i} className="info-item"><span className="bullet" style={{color}}>●</span>{parts.length > 1 ? <span><strong>{parts[0]}</strong> — {parts[1]}</span> : <span>{item}</span>}</div>);
-        })}
-      </div>
-    </div>
-  );
-}
+function InfoPanel({title,items,icon,color}){return(<div className="info-section"><div className="info-section-header"><span className="info-section-icon" style={{background:color+"14"}}>{icon}</span><span className="info-section-title">{title}</span></div><div className="info-items">{items.map((item,i)=>{const p=item.split(" — ");return(<div key={i} className="info-item"><span className="bullet" style={{color}}>●</span>{p.length>1?<span><strong>{p[0]}</strong> — {p[1]}</span>:<span>{item}</span>}</div>)})}</div></div>)}
 
-function CategoryDetail({category,onBack}) {
-  const [showInfo,setShowInfo] = useState(false);
-  return (
-    <div style={{animation:"slideIn 0.35s ease"}}>
-      <button onClick={onBack} className="back-btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>전체 카테고리</button>
-      <div className="hero-banner" style={{background:category.gradient}}>
-        <div className="hero-bg-icon">{category.icon}</div>
-        <div style={{position:"relative",zIndex:1}}>
-          <div className="hero-main-icon">{category.icon}</div>
-          <h2 className="hero-title">{category.name}</h2>
-          <p className="hero-subtitle">{category.subtitle}</p>
-          <p className="hero-concept">{category.concept}</p>
-        </div>
-      </div>
-      <button onClick={()=>setShowInfo(!showInfo)} className="info-toggle-btn">
-        <span className="info-toggle-label"><span style={{fontSize:"17px"}}>📖</span><span>주요기능 · 활용분야 · 주의점</span></span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="info-toggle-arrow" style={{transform:showInfo?"rotate(180deg)":"rotate(0)"}}><path d="M5 8l5 5 5-5" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-      </button>
-      {showInfo && (<div className="info-panel"><InfoPanel icon="⚡" title="주요 기능" items={category.features} color={category.color} /><InfoPanel icon="🎯" title="주요 활용 분야" items={category.useCases} color={category.color} /><InfoPanel icon="⚠️" title="주의점" items={category.cautions} color="#DC2626" /></div>)}
-      <div className="tools-list-header"><h3 className="tools-list-title">추천 AI 도구</h3><span className="tools-list-count" style={{background:category.color+"14",color:category.color}}>{category.tools.length}개</span></div>
-      <div className="tools-grid">{category.tools.map((tool,i) => <ToolCard key={i} tool={tool} />)}</div>
-    </div>
-  );
-}
+function CategoryDetail({category,onBack}){const[showInfo,setShowInfo]=useState(false);return(<div style={{animation:"slideIn 0.35s ease"}}><button onClick={onBack} className="back-btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>전체 카테고리</button><div className="hero-banner" style={{background:category.gradient}}><div className="hero-bg-icon">{category.icon}</div><div style={{position:"relative",zIndex:1}}><div className="hero-main-icon">{category.icon}</div><h2 className="hero-title">{category.name}</h2><p className="hero-subtitle">{category.subtitle}</p><p className="hero-concept">{category.concept}</p></div></div><button onClick={()=>setShowInfo(!showInfo)} className="info-toggle-btn"><span className="info-toggle-label"><span style={{fontSize:"17px"}}>📖</span><span>주요기능 · 활용분야 · 주의점</span></span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="info-toggle-arrow" style={{transform:showInfo?"rotate(180deg)":"rotate(0)"}}><path d="M5 8l5 5 5-5" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></button>{showInfo&&(<div className="info-panel"><InfoPanel icon="⚡" title="주요 기능" items={category.features} color={category.color}/><InfoPanel icon="🎯" title="주요 활용 분야" items={category.useCases} color={category.color}/><InfoPanel icon="⚠️" title="주의점" items={category.cautions} color="#DC2626"/></div>)}<div className="tools-list-header"><h3 className="tools-list-title">추천 AI 도구</h3><span className="tools-list-count" style={{background:category.color+"14",color:category.color}}>{category.tools.length}개</span></div><div className="tools-grid">{category.tools.map((t,i)=><ToolCard key={i} tool={t}/>)}</div></div>)}
 
-function CategoryCard({category,onClick,idx}) {
-  return (
-    <button onClick={onClick} className="cat-card" style={{animationDelay:idx*0.04+"s"}}>
-      <div className="cat-bar" style={{background:category.gradient}} />
-      <div className="cat-inner">
-        <div className="cat-icon" style={{background:category.color+"10"}}>{category.icon}</div>
-        <div className="cat-text"><div className="cat-name">{category.name}</div><div className="cat-sub">{category.subtitle}</div></div>
-        <div className="cat-count" style={{background:category.color+"12",color:category.color}}>{category.tools.length}개</div>
-      </div>
-    </button>
-  );
-}
+function CategoryCard({category,onClick,idx}){return(<button onClick={onClick} className="cat-card" style={{animationDelay:idx*0.04+"s"}}><div className="cat-bar" style={{background:category.gradient}}/><div className="cat-inner"><div className="cat-icon" style={{background:category.color+"10"}}>{category.icon}</div><div className="cat-text"><div className="cat-name">{category.name}</div><div className="cat-sub">{category.subtitle}</div></div><div className="cat-count" style={{background:category.color+"12",color:category.color}}>{category.tools.length}개</div></div></button>)}
 
-function App() {
-  const [selected,setSelected] = useState(null);
-  const [search,setSearch] = useState("");
-  const totalTools = categories.reduce((a,c) => a+c.tools.length, 0);
-  const filteredTools = search.trim() ? categories.flatMap(c => c.tools.filter(t => matchSearch(t, search)).map(t => ({...t,category:c}))) : [];
-  const selectedCategory = selected ? categories.find(c => c.id===selected) : null;
+function SocialLinks(){return(<div className="social-section"><div className="social-grid">{socialLinks.map((s,i)=>(<a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="social-link"><span className="social-icon" style={{background:s.color}}>{s.icon}</span><span className="social-label" style={s.iconColor?{color:s.iconColor}:{}}>{s.name}</span></a>))}</div></div>)}
 
-  function goHome() { setSelected(null); setSearch(""); window.scrollTo({top:0,behavior:"smooth"}); }
-  useEffect(() => { if(selected) window.scrollTo({top:0,behavior:"smooth"}); },[selected]);
+function App(){
+  const[selected,setSelected]=useState(null);
+  const[search,setSearch]=useState("");
+  const totalTools=categories.reduce((a,c)=>a+c.tools.length,0);
+  const filteredTools=search.trim()?categories.flatMap(c=>c.tools.filter(t=>matchSearch(t,search)).map(t=>({...t,category:c}))):[];
+  const selectedCategory=selected?categories.find(c=>c.id===selected):null;
+  function goHome(){setSelected(null);setSearch("");window.scrollTo({top:0,behavior:"smooth"})}
+  useEffect(()=>{if(selected)window.scrollTo({top:0,behavior:"smooth"})},[selected]);
+  const showHome=!search.trim()&&!selectedCategory;
 
-  const showHome = !search.trim() && !selectedCategory;
-
-  return (
+  return(
     <React.Fragment>
-      <nav className="top-nav"><div className="top-nav-inner">
-        <button onClick={goHome} className="home-btn">🏠 홈</button>
-        <span className="top-nav-title">유쌤클래스 AI 도구 모음집</span>
-      </div></nav>
-
+      <nav className="top-nav"><div className="top-nav-inner"><button onClick={goHome} className="home-btn">🏠 홈</button><span className="top-nav-title">유쌤클래스 AI 도구 모음집</span></div></nav>
       <div className="container">
         <div className="hdr">
           <div className="hdr-badge"><span className="hdr-badge-ico">🤖</span> 친절한유성쌤이 추천하는</div>
@@ -424,57 +235,26 @@ function App() {
           <p className="hdr-sub">유쌤클래스 | AI콘텐츠마케팅연구소</p>
         </div>
 
-        {/* ─── INTRO CARD (홈 화면에서만 표시) ─── */}
-        {showHome && (
-          <div className="intro-card">
-            <p className="intro-text">
-              AI 도구는 많지만, 어떤 걸 써야 할지 막막하셨죠?{" "}
-              <span className="highlight">친절한유성쌤</span>이 강의 현장에서 수강생들과 함께 직접 써보고 검증한{" "}
-              AI 도구 <span className="emphasis">{totalTools}개</span>를{" "}
-              <span className="emphasis">8개 카테고리</span>로 한눈에 정리했습니다.
-              <br/><br/>
-              콘텐츠 기획부터 마케팅, 영상 제작, 업무 자동화까지 —{" "}
-              이 모음집 하나면 2026년 AI 활용, 어렵지 않습니다.
-              <br/>
-              <span className="cta">📌 북마크 필수인 AI 도구 가이드, 지금 바로 확인해 보세요!</span>
-            </p>
-          </div>
-        )}
+        {showHome&&(<React.Fragment>
+          <div className="intro-card"><p className="intro-text">
+            AI 도구는 많지만, 어떤 걸 써야 할지 막막하셨죠? <span className="highlight">친절한유성쌤</span>이 강의 현장에서 수강생들과 함께 직접 써보고 검증한 AI 도구 <span className="emphasis">{totalTools}개</span>를 <span className="emphasis">8개 카테고리</span>로 한눈에 정리했습니다.<br/><br/>콘텐츠 기획부터 마케팅, 영상 제작, 업무 자동화까지 — 이 모음집 하나면 2026년 AI 활용, 어렵지 않습니다.<br/><span className="cta">📌 북마크 필수인 AI 도구 가이드, 지금 바로 확인해 보세요!</span>
+          </p></div>
+          <SocialLinks/>
+        </React.Fragment>)}
 
-        <div className="search-wrap">
-          <span className="search-ico">🔍</span>
-          <input type="text" className="search-input" placeholder="AI 도구 이름 또는 키워드 검색... (예: 제미나이, 캡컷)" value={search} onChange={(e)=>{setSearch(e.target.value);setSelected(null);}} />
-        </div>
+        <div className="search-wrap"><span className="search-ico">🔍</span><input type="text" className="search-input" placeholder="AI 도구 이름 또는 키워드 검색... (예: 제미나이, 캡컷)" value={search} onChange={(e)=>{setSearch(e.target.value);setSelected(null)}}/></div>
 
-        {search.trim() && !selected && (
-          <div style={{animation:"fadeIn 0.3s ease"}}>
-            {filteredTools.length > 0 ? (
-              <React.Fragment>
-                <p style={{fontSize:"14px",color:"#6B7280",margin:"0 0 14px 4px"}}>검색 결과 <strong style={{color:"#111827"}}>{filteredTools.length}개</strong></p>
-                <div className="search-grid">{filteredTools.map((tool,i) => (<div key={i} style={{position:"relative"}}><ToolCard tool={tool} /><span className="search-cat-tag" style={{color:tool.category.color,background:tool.category.color+"10"}}>{tool.category.icon} {tool.category.name}</span></div>))}</div>
-              </React.Fragment>
-            ) : (
-              <div style={{textAlign:"center",padding:"48px 0",color:"#6B7280"}}><div style={{fontSize:"40px",marginBottom:"12px"}}>🔍</div><p style={{fontSize:"15px"}}>"{search}"에 대한 결과가 없습니다</p></div>
-            )}
-          </div>
-        )}
+        {search.trim()&&!selected&&(<div style={{animation:"fadeIn 0.3s ease"}}>{filteredTools.length>0?(<React.Fragment><p style={{fontSize:"14px",color:"#6B7280",margin:"0 0 14px 4px"}}>검색 결과 <strong style={{color:"#111827"}}>{filteredTools.length}개</strong></p><div className="search-grid">{filteredTools.map((t,i)=>(<div key={i} style={{position:"relative"}}><ToolCard tool={t}/><span className="search-cat-tag" style={{color:t.category.color,background:t.category.color+"10"}}>{t.category.icon} {t.category.name}</span></div>))}</div></React.Fragment>):(<div style={{textAlign:"center",padding:"48px 0",color:"#6B7280"}}><div style={{fontSize:"40px",marginBottom:"12px"}}>🔍</div><p style={{fontSize:"15px"}}>"{search}"에 대한 결과가 없습니다</p></div>)}</div>)}
 
-        {!search.trim() && selectedCategory ? (
-          <CategoryDetail category={selectedCategory} onBack={()=>setSelected(null)} />
-        ) : !search.trim() && (
-          <div className="cat-grid">{categories.map((cat,i) => (<CategoryCard key={cat.id} category={cat} onClick={()=>setSelected(cat.id)} idx={i} />))}</div>
-        )}
+        {!search.trim()&&selectedCategory?(<CategoryDetail category={selectedCategory} onBack={()=>setSelected(null)}/>):!search.trim()&&(<div className="cat-grid">{categories.map((c,i)=>(<CategoryCard key={c.id} category={c} onClick={()=>setSelected(c.id)} idx={i}/>))}</div>)}
 
-        <div className="ftr">
-          <p>© 2026 친절한유성쌤 · 유쌤클래스</p>
-          <div className="ftr-links"><a href="https://yussamclass.com" target="_blank" rel="noopener noreferrer">yussamclass.com</a></div>
-        </div>
+        <div className="ftr"><p>© 2026 친절한유성쌤 · 유쌤클래스</p><div className="ftr-links"><a href="https://www.yussamclass.com" target="_blank" rel="noopener noreferrer">yussamclass.com</a></div></div>
       </div>
     </React.Fragment>
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
 </script>
 </body>
 </html>
