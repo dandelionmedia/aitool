@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>친절한유성쌤이 추천하는 AI 도구 모음집 2026</title>
-<meta name="description" content="유쌤클래스 AI콘텐츠마케팅연구소 - 2026년 최신 AI 도구 8개 카테고리 추천 모음">
+<meta name="description" content="유쌤클래스 AI콘텐츠마케팅연구소 - 2026년 10월 대한민국 활용도를 반영한 최신 AI 도구 9개 카테고리 추천 모음 - 바이브코딩·업무자동화 포함">
 <meta name="author" content="친절한유성쌤 김유성">
 <meta property="og:title" content="친절한유성쌤 AI 도구 모음집 2026">
-<meta property="og:description" content="텍스트·이미지·영상·음악·편집·프레젠테이션·올인원·에이전트 8개 카테고리 AI 도구 추천">
+<meta property="og:description" content="2026년 10월 대한민국 활용도를 반영한 텍스트·이미지·영상·음악·편집·프레젠테이션·올인원·에이전트 AI 도구 추천">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
@@ -15,122 +15,183 @@
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <style>
-:root{--bg:#F4F5F7;--card-bg:#FFF;--border:#E2E5EA;--border-light:#EDF0F3;--text-primary:#111827;--text-secondary:#374151;--text-tertiary:#6B7280;--accent:#2563EB}
+:root{
+  --bg:#F4F7FB;--card:#FFFFFF;--line:#DCE5EF;
+  --text:#0D1F37;--sub:#41516A;--muted:#77869B;
+  --blue:#2563EB;--navy:#061A34;--green:#0F766E;--gold:#D4A94F;
+  --shadow:0 12px 36px rgba(15,35,67,.08);
+  --shadow2:0 20px 52px rgba(15,35,67,.14)
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;min-height:100vh;background:var(--bg);color:var(--text-primary);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:15px}
-@keyframes slideIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@keyframes cardIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+body{
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;
+  min-height:100vh;color:var(--text);line-height:1.65;font-size:15px;-webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(circle at 8% 0%,rgba(37,99,235,.09),transparent 29%),
+    radial-gradient(circle at 94% 5%,rgba(15,118,110,.07),transparent 25%),
+    linear-gradient(180deg,#FAFCFE 0%,#F1F5F9 50%,#F7F9FC 100%);
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.3;
+  background-image:linear-gradient(rgba(15,35,67,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(15,35,67,.025) 1px,transparent 1px);
+  background-size:38px 38px
+}
+@keyframes slideIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.top-nav{position:sticky;top:0;z-index:100;background:rgba(244,245,247,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 24px}
-.top-nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.home-btn{display:flex;align-items:center;gap:8px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:10px;padding:8px 16px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;color:var(--text-primary);transition:all .2s;box-shadow:0 1px 3px rgba(0,0,0,.04);text-decoration:none}
-.home-btn:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 2px 8px rgba(37,99,235,.12)}
-.top-nav-title{font-size:13px;font-weight:600;color:var(--text-tertiary);letter-spacing:-0.01em}
-.container{max-width:960px;margin:0 auto;padding:0 24px 56px}
-.hdr{text-align:center;padding:36px 0 20px}
-.hdr-badge{display:inline-flex;align-items:center;gap:6px;background:#EFF6FF;border:1px solid #BFDBFE;padding:7px 18px;border-radius:24px;font-size:13.5px;font-weight:650;color:#2563EB;margin-bottom:16px}
+
+.top-nav{
+  position:sticky;top:0;z-index:100;padding:10px 24px;
+  background:rgba(248,250,253,.84);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(203,213,225,.72)
+}
+.top-nav-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.home-btn{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:12px;padding:8px 15px;cursor:pointer;font:800 13px inherit;color:var(--text);transition:.22s;box-shadow:0 3px 12px rgba(15,35,67,.05)}
+.home-btn:hover{border-color:#93C5FD;color:var(--blue);transform:translateY(-1px)}
+.top-nav-title{font-size:12px;font-weight:760;color:#66758B;letter-spacing:.02em}
+
+.container{max-width:1160px;margin:0 auto;padding:0 24px 68px}
+.hdr{text-align:center;padding:54px 0 24px}
+.hdr::before{content:"AI TOOL DIRECTORY · KOREA";display:block;font-size:10.5px;font-weight:900;letter-spacing:.21em;color:#8DA1BB;margin-bottom:12px}
+.hdr-badge{display:inline-flex;align-items:center;gap:7px;background:#EFF6FF;border:1px solid #BFDBFE;padding:7px 16px;border-radius:999px;font-size:12px;font-weight:820;color:#1D4ED8;margin-bottom:18px;box-shadow:0 5px 18px rgba(37,99,235,.06)}
 .hdr-badge-ico{animation:float 2.5s ease infinite;display:inline-block}
-.hdr-title{font-size:36px;font-weight:900;letter-spacing:-0.04em;line-height:1.25;background:linear-gradient(135deg,#0F172A 0%,#4338CA 50%,#2563EB 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
-.hdr-stats{font-size:15.5px;color:var(--text-secondary);margin-bottom:5px;font-weight:500}
-.hdr-sub{font-size:13.5px;color:var(--text-tertiary);font-weight:500}
-.intro-card{max-width:680px;margin:0 auto 28px;background:linear-gradient(135deg,#EFF6FF 0%,#F5F3FF 50%,#FFF7ED 100%);border:1.5px solid #DBEAFE;border-radius:18px;padding:28px 32px;position:relative;overflow:hidden;animation:fadeIn .5s ease}
-.intro-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(37,99,235,.08) 0%,transparent 70%);border-radius:50%;pointer-events:none}
-.intro-text{position:relative;z-index:1;font-size:15px;line-height:1.85;color:#1E293B;font-weight:450;word-break:keep-all}
-.intro-text .highlight{color:#2563EB;font-weight:700}
-.intro-text .emphasis{color:#7C3AED;font-weight:700}
-.intro-text .cta{display:inline-block;margin-top:10px;font-weight:750;color:#111827;font-size:15.5px}
-.search-wrap{position:relative;margin:0 auto 28px;max-width:600px}
-.search-ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-tertiary);pointer-events:none}
-.search-input{width:100%;padding:15px 18px 15px 48px;border:1.5px solid var(--border);border-radius:14px;font-size:15px;font-family:inherit;background:var(--card-bg);outline:none;transition:all .2s;color:var(--text-primary);box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
-.search-input::placeholder{color:#9CA3AF}
-.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.cat-card{width:100%;padding:22px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:16px;cursor:pointer;text-align:left;font-family:inherit;position:relative;overflow:hidden;transition:all .28s cubic-bezier(.4,0,.2,1);box-shadow:0 1px 3px rgba(0,0,0,.04);animation:cardIn .4s ease both;display:flex;align-items:center}
-.cat-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.08);border-color:var(--accent)}
-.cat-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
-.cat-inner{display:flex;align-items:center;gap:14px;width:100%}
-.cat-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.hdr-title{font-size:46px;font-weight:950;letter-spacing:-.058em;line-height:1.12;margin-bottom:12px;background:linear-gradient(120deg,#071B36 0%,#173B72 42%,#2563EB 70%,#0F766E 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-stats{font-size:15px;color:#40516A;margin-bottom:5px;font-weight:700}
+.hdr-sub{font-size:12.5px;color:#7B8799;font-weight:600}
+
+.intro-card{
+  max-width:860px;margin:0 auto 22px;border-radius:24px;padding:32px 36px;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 100% 0%,rgba(212,169,79,.17),transparent 27%),linear-gradient(135deg,#061A34 0%,#102D56 62%,#123E50 100%);
+  box-shadow:0 19px 50px rgba(7,27,54,.18);border:1px solid rgba(255,255,255,.07);animation:fadeIn .5s ease
+}
+.intro-card::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.05),transparent 42%);pointer-events:none}
+.intro-text{position:relative;z-index:1;font-size:15px;line-height:1.94;color:#E7EEF8;font-weight:450;word-break:keep-all}
+.intro-text .highlight{color:#91D8FF;font-weight:800}
+.intro-text .emphasis{color:#F4D58C;font-weight:820}
+.intro-text .cta{display:inline-block;margin-top:10px;font-weight:800;color:#fff;font-size:15px}
+
+.brand-panel{
+  max-width:980px;margin:0 auto 24px;padding:20px;border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(248,251,255,.94));
+  border:1px solid var(--line);box-shadow:var(--shadow)
+}
+.brand-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.brand-title{font-size:16px;font-weight:900;letter-spacing:-.025em;color:var(--text)}
+.brand-desc{font-size:12px;color:var(--muted);margin-top:3px}
+.brand-home{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:11px;text-decoration:none;
+  color:#fff;background:linear-gradient(135deg,#0B2B55,#2563EB);font-size:12px;font-weight:850;box-shadow:0 8px 18px rgba(37,99,235,.18)
+}
+.brand-home:hover{transform:translateY(-1px)}
+.brand-social-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.brand-social-link{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:72px;
+  border:1px solid #E5EBF2;border-radius:13px;text-decoration:none;background:#fff;transition:.2s
+}
+.brand-social-link:hover{transform:translateY(-3px);box-shadow:0 9px 20px rgba(15,35,67,.08);border-color:#BCD0E8}
+.brand-social-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.brand-social-label{font-size:10.8px;font-weight:800;color:var(--text);text-align:center}
+
+.kr-popular{margin:0 auto 24px;max-width:940px;background:rgba(255,255,255,.91);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(10px);animation:fadeIn .45s ease}
+.kr-popular-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}
+.kr-popular-title{font-size:16.5px;font-weight:900;letter-spacing:-.025em;color:var(--text)}
+.kr-popular-sub{font-size:12.1px;color:var(--muted);margin-top:3px}
+.kr-popular-date{font-size:10.8px;font-weight:850;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:999px;padding:5px 10px;white-space:nowrap}
+.kr-popular-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.kr-popular-link{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:88px;padding:12px 8px;border:1px solid #E7EDF4;border-radius:13px;text-decoration:none;background:linear-gradient(180deg,#fff,#FAFCFE);transition:.22s}
+.kr-popular-link:hover{transform:translateY(-3px);border-color:#A9C8F5;box-shadow:0 9px 22px rgba(37,99,235,.09)}
+.kr-popular-icon{font-size:22px;line-height:1}
+.kr-popular-name{font-size:12.5px;font-weight:840;color:var(--text);text-align:center;line-height:1.3}
+.kr-popular-note{font-size:10.7px;color:var(--muted);text-align:center;line-height:1.25}
+
+.search-wrap{position:relative;margin:0 auto 31px;max-width:720px}
+.search-ico{position:absolute;left:17px;top:50%;transform:translateY(-50%);font-size:17px;color:#8190A6;pointer-events:none}
+.search-input{width:100%;padding:16px 20px 16px 49px;border:1px solid #D5DEEA;border-radius:16px;font-size:14.3px;font-family:inherit;background:rgba(255,255,255,.96);outline:none;transition:.22s;color:var(--text);box-shadow:0 8px 25px rgba(15,35,67,.06)}
+.search-input:focus{border-color:#6FA4F5;box-shadow:0 0 0 4px rgba(37,99,235,.08),0 10px 28px rgba(15,35,67,.07)}
+.search-input::placeholder{color:#9AA6B6}
+
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat-card{width:100%;min-height:138px;padding:21px;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:19px;cursor:pointer;text-align:left;font-family:inherit;position:relative;overflow:hidden;transition:.28s cubic-bezier(.4,0,.2,1);box-shadow:0 8px 24px rgba(15,35,67,.055);animation:cardIn .4s ease both;display:flex;align-items:center}
+.cat-card::after{content:"";position:absolute;right:-48px;bottom:-70px;width:120px;height:120px;border-radius:50%;background:rgba(37,99,235,.05);transition:.28s}
+.cat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2);border-color:#B7C9DF}
+.cat-card:hover::after{transform:scale(1.2)}
+.cat-bar{position:absolute;top:0;left:0;right:0;height:3px}
+.cat-inner{display:flex;align-items:center;gap:13px;width:100%;position:relative;z-index:2}
+.cat-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;border:1px solid rgba(148,163,184,.13)}
 .cat-text{flex:1;min-width:0}
-.cat-name{font-weight:800;font-size:16px;letter-spacing:-0.02em;color:var(--text-primary)}
-.cat-sub{font-size:13px;color:var(--text-tertiary);margin-top:3px;font-weight:450}
-.cat-count{font-size:13px;font-weight:700;padding:5px 14px;border-radius:20px;flex-shrink:0;white-space:nowrap}
-.back-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:14px;font-weight:600;padding:10px 0;margin-bottom:14px;font-family:inherit;transition:color .2s}
-.back-btn:hover{color:var(--accent)}
-.hero-banner{border-radius:20px;padding:36px;margin-bottom:22px;color:#fff;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
-.hero-bg-icon{position:absolute;top:-30px;right:-20px;font-size:150px;opacity:.12;pointer-events:none}
-.hero-main-icon{font-size:48px;margin-bottom:12px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.15))}
-.hero-title{font-size:28px;font-weight:900;letter-spacing:-0.03em;margin-bottom:5px;color:#fff;background:none;-webkit-text-fill-color:#fff}
-.hero-subtitle{font-size:15px;opacity:.85;font-weight:500}
-.hero-concept{font-size:15px;line-height:1.8;margin-top:16px;opacity:.93}
-.info-toggle-btn{width:100%;padding:16px 20px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:all .2s}
-.info-toggle-btn:hover{border-color:var(--accent)}
-.info-toggle-label{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--text-primary)}
+.cat-name{font-weight:900;font-size:15.3px;letter-spacing:-.025em;color:var(--text)}
+.cat-sub{font-size:12px;color:var(--muted);margin-top:4px;font-weight:520;line-height:1.42}
+.cat-count{font-size:10.8px;font-weight:850;padding:5px 10px;border-radius:999px;flex-shrink:0;white-space:nowrap}
+
+.back-btn{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:#607087;font-size:13.3px;font-weight:760;padding:10px 0;margin-bottom:14px;font-family:inherit;transition:.2s}
+.back-btn:hover{color:var(--blue)}
+.hero-banner{border-radius:24px;padding:40px;margin-bottom:18px;color:#fff;position:relative;overflow:hidden;box-shadow:0 18px 46px rgba(15,35,67,.15)}
+.hero-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.08),transparent 46%);pointer-events:none}
+.hero-bg-icon{position:absolute;top:-34px;right:-10px;font-size:160px;opacity:.08;pointer-events:none}
+.hero-main-icon{font-size:44px;margin-bottom:11px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.15))}
+.hero-title{font-size:29px;font-weight:950;letter-spacing:-.04em;margin-bottom:5px;color:#fff;background:none;-webkit-text-fill-color:#fff}
+.hero-subtitle{font-size:14px;opacity:.86;font-weight:560}
+.hero-concept{font-size:14.3px;line-height:1.87;margin-top:15px;opacity:.94;max-width:900px}
+
+.info-toggle-btn{width:100%;padding:15px 19px;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-family:inherit;box-shadow:0 5px 18px rgba(15,35,67,.045);transition:.2s}
+.info-toggle-btn:hover{border-color:#B7CAE4}
+.info-toggle-label{display:flex;align-items:center;gap:8px;font-weight:820;font-size:13.8px;color:var(--text)}
 .info-toggle-arrow{transition:transform .3s}
-.info-panel{background:var(--card-bg);border:1.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.04);animation:fadeIn .3s ease}
-.info-section{margin-bottom:22px}.info-section:last-of-type{margin-bottom:0}
-.info-section-header{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--border-light)}
+.info-panel{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:24px;box-shadow:var(--shadow);animation:fadeIn .3s ease}
+.info-section{margin-bottom:21px}.info-section:last-of-type{margin-bottom:0}
+.info-section-header{display:flex;align-items:center;gap:8px;margin-bottom:11px;padding-bottom:9px;border-bottom:1px solid #EDF2F7}
 .info-section-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
-.info-section-title{font-weight:750;font-size:15px;color:var(--text-primary);letter-spacing:-0.01em}
+.info-section-title{font-weight:840;font-size:14.3px;color:var(--text)}
 .info-items{display:flex;flex-direction:column;gap:8px}
-.info-item{font-size:14px;color:var(--text-secondary);line-height:1.7;padding-left:16px;position:relative}
-.info-item .bullet{position:absolute;left:0;font-weight:700;font-size:9px;top:7px}
-.info-item strong{color:var(--text-primary);font-weight:650}
-.tools-list-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.tools-list-title{font-size:18px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em}
-.tools-list-count{font-size:13px;font-weight:700;padding:5px 14px;border-radius:20px}
-.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.tool-card{display:block;padding:18px 20px;background:var(--card-bg);border-radius:14px;border:1.5px solid var(--border);text-decoration:none;position:relative;overflow:hidden;transition:all .25s cubic-bezier(.4,0,.2,1);box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.tool-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.1);border-color:var(--accent)}
-.tool-name-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
-.tool-name{font-weight:750;font-size:15px;color:var(--text-primary);letter-spacing:-0.01em}
-.tool-badge{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:6px;border:1px solid;white-space:nowrap;line-height:16px}
-.tool-desc{font-size:13.5px;color:var(--text-secondary);line-height:1.6}
-.tool-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text-tertiary);opacity:.4}
-.search-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.search-cat-tag{position:absolute;bottom:10px;right:38px;font-size:11px;padding:2px 9px;border-radius:6px;font-weight:650;pointer-events:none}
+.info-item{font-size:13.4px;color:var(--sub);line-height:1.72;padding-left:16px;position:relative}
+.info-item .bullet{position:absolute;left:0;font-weight:700;font-size:8px;top:7px}
+.info-item strong{color:var(--text);font-weight:730}
 
-/* ─── FOOTER ─── */
-.ftr{text-align:center;margin-top:48px;padding-top:28px;border-top:1.5px solid var(--border)}
-.ftr-community-title{font-size:16px;font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:16px;text-align:center}
+.tools-list-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+.tools-list-title{font-size:17px;font-weight:900;color:var(--text);letter-spacing:-.02em}
+.tools-list-count{font-size:11.3px;font-weight:850;padding:5px 11px;border-radius:999px}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.tool-card{display:block;min-height:122px;padding:18px;background:rgba(255,255,255,.97);border-radius:16px;border:1px solid var(--line);text-decoration:none;position:relative;overflow:hidden;transition:.25s cubic-bezier(.4,0,.2,1);box-shadow:0 6px 20px rgba(15,35,67,.045)}
+.tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow2);border-color:#B6CAE4}
+.tool-name-row{display:flex;align-items:center;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+.tool-name{font-weight:860;font-size:14.4px;color:var(--text);letter-spacing:-.01em}
+.tool-badge{font-size:9.6px;font-weight:850;padding:2px 7px;border-radius:6px;border:1px solid;white-space:nowrap;line-height:15px}
+.tool-desc{font-size:12.5px;color:var(--sub);line-height:1.63;padding-right:14px}
+.tool-arrow{position:absolute;right:15px;top:16px;font-size:14px;color:#91A0B4;opacity:.65}
+.search-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.search-cat-tag{position:absolute;bottom:9px;right:35px;font-size:10px;padding:2px 7px;border-radius:6px;font-weight:750;pointer-events:none}
+
+.ftr{text-align:center;margin-top:55px;padding-top:30px;border-top:1px solid #DDE5EF}
+.ftr-community-title{font-size:15px;font-weight:900;color:var(--text);letter-spacing:-.02em;margin-bottom:15px}
 .social-grid{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px}
-.social-link{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:12px;text-decoration:none;transition:all .22s cubic-bezier(.4,0,.2,1);box-shadow:0 1px 2px rgba(0,0,0,.03);cursor:pointer}
-.social-link:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
-.social-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;color:#fff}
-.social-label{font-size:13px;font-weight:650;color:var(--text-primary);white-space:nowrap;letter-spacing:-0.01em}
-.ftr-copy{font-size:13px;color:var(--text-tertiary);line-height:1.8}
-.ftr-links{display:flex;justify-content:center;gap:16px;margin-top:10px}
-.ftr-links a{font-size:13.5px;color:var(--accent);text-decoration:none;font-weight:600;transition:opacity .2s}
-.ftr-links a:hover{opacity:.7}
-
+.social-link{display:flex;align-items:center;gap:7px;padding:8px 13px;background:rgba(255,255,255,.93);border:1px solid var(--line);border-radius:11px;text-decoration:none;transition:.22s;box-shadow:0 4px 12px rgba(15,35,67,.04)}
+.social-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,35,67,.08);border-color:#BDD0E7}
+.social-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;color:#fff}
+.social-label{font-size:12px;font-weight:740;color:var(--text);white-space:nowrap}
+.ftr-copy{font-size:12px;color:#8793A5;line-height:1.8}
+@media(max-width:980px){.brand-social-grid{grid-template-columns:repeat(4,1fr)}.cat-grid{grid-template-columns:repeat(2,1fr)}.tools-grid,.search-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
-.top-nav{padding:8px 16px}.home-btn{padding:7px 12px;font-size:13px}.top-nav-title{font-size:12px}
-.container{padding:0 16px 40px}.hdr{padding:28px 0 18px}.hdr-title{font-size:28px}.hdr-stats{font-size:14px}
-.intro-card{padding:22px 20px;margin:0 auto 24px;border-radius:14px}.intro-text{font-size:14px;line-height:1.8}.intro-text .cta{font-size:14.5px}
-.social-grid{gap:6px}.social-link{padding:8px 12px;border-radius:10px}.social-icon{width:24px;height:24px;font-size:13px;border-radius:6px}.social-label{font-size:12px}
-.ftr-community-title{font-size:15px;margin-bottom:14px}
-.cat-grid{grid-template-columns:1fr;gap:10px}.cat-card{padding:18px}.cat-icon{width:46px;height:46px;font-size:23px;border-radius:12px}
-.tools-grid{grid-template-columns:1fr}.search-grid{grid-template-columns:1fr}
-.hero-banner{padding:26px;border-radius:16px}.hero-main-icon{font-size:40px}.hero-title{font-size:23px}.hero-concept{font-size:14px}.hero-bg-icon{font-size:110px;top:-20px;right:-10px}.info-panel{padding:22px}
+  .top-nav{padding:8px 15px}.top-nav-title{font-size:11.3px}
+  .container{padding:0 15px 44px}.hdr{padding:38px 0 20px}.hdr-title{font-size:34px}.hdr-stats{font-size:13.5px}
+  .intro-card{padding:24px 21px;border-radius:18px}.intro-text{font-size:13.7px}
+  .brand-head{align-items:flex-start;flex-direction:column}.brand-social-grid{grid-template-columns:repeat(3,1fr)}
+  .kr-popular{padding:18px}.kr-popular-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-banner{padding:28px}.hero-title{font-size:24px}.hero-bg-icon{font-size:118px}
+  .tools-grid,.search-grid{grid-template-columns:1fr}
 }
-@media(max-width:420px){
-.container{padding:0 14px 36px}.hdr{padding:22px 0 16px}.hdr-title{font-size:24px}.hdr-badge{font-size:12px;padding:5px 13px}
-.intro-card{padding:20px 18px;border-radius:12px}.intro-text{font-size:13.5px;line-height:1.75}.intro-text .cta{font-size:14px}
-.social-grid{gap:5px}.social-link{padding:7px 10px}.social-icon{width:22px;height:22px;font-size:12px;border-radius:6px}.social-label{font-size:11.5px}
-.ftr-community-title{font-size:14px}
-.search-input{padding:13px 14px 13px 42px;font-size:14px;border-radius:12px}
-.cat-card{padding:16px}.cat-icon{width:42px;height:42px;font-size:21px;border-radius:11px}.cat-name{font-size:15px}.cat-sub{font-size:12px}
-.hero-banner{padding:22px}.hero-main-icon{font-size:34px;margin-bottom:8px}.hero-title{font-size:21px}.hero-subtitle{font-size:13px}.hero-concept{font-size:13.5px;line-height:1.75;margin-top:12px}
-.info-panel{padding:18px}.info-section-title{font-size:14px}.info-item{font-size:13.5px}
-.tool-card{padding:16px}.tool-name{font-size:14px}.tool-desc{font-size:13px}
+@media(max-width:540px){
+  .hdr{padding-top:31px}.hdr-title{font-size:29px}.hdr::before{font-size:9.3px}
+  .cat-grid{grid-template-columns:1fr}.cat-card{min-height:112px;padding:17px}.cat-icon{width:45px;height:45px;font-size:21px}
+  .brand-panel{padding:16px}.brand-social-grid{grid-template-columns:repeat(2,1fr)}
+  .kr-popular-head{align-items:flex-start;flex-direction:column;gap:7px}.kr-popular-grid{grid-template-columns:repeat(2,1fr)}
+  .search-input{padding:14px 16px 14px 44px;font-size:13.4px}
+  .hero-banner{padding:23px;border-radius:18px}.hero-title{font-size:21px}.hero-concept{font-size:13px}
+  .info-panel{padding:18px}.tool-card{min-height:104px;padding:16px}
+  .social-link{padding:7px 10px}.social-label{font-size:11px}
 }
-@media(min-width:960px){
-.cat-grid{grid-template-columns:repeat(2,1fr);gap:16px}.tools-grid{grid-template-columns:repeat(2,1fr);gap:12px}.search-grid{grid-template-columns:repeat(2,1fr);gap:12px}
-.hero-banner{padding:42px}.hero-title{font-size:30px}
-.intro-card{padding:32px 36px}.intro-text{font-size:15.5px}
-}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:6px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:#BAC7D7;border-radius:8px}::-webkit-scrollbar-track{background:transparent}
 </style>
 </head>
 <body>
@@ -148,18 +209,28 @@ const socialLinks = [
   {name:"쓰레드",url:"https://www.threads.com/@yussam_class",color:"#000000",icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12.186 24h-.007C5.449 24 .305 18.636.305 12S5.449 0 12.186 0c3.126 0 5.998 1.194 8.11 3.362l-2.724 2.59C16.126 4.476 14.2 3.6 12.186 3.6c-4.62 0-8.381 3.77-8.381 8.4s3.76 8.4 8.381 8.4c3.437 0 6.168-1.903 7.34-4.8h-7.34v-3.6h11.37c.109.596.163 1.2.163 1.8C23.72 19.353 18.627 24 12.186 24z"/></svg>},
 ];
 
+const koreaPopular = [
+  {name:"ChatGPT",url:"https://chatgpt.com/",icon:"💬",note:"대화·문서·코딩"},
+  {name:"Google Gemini",url:"https://gemini.google.com/",icon:"✨",note:"검색·구글 연동"},
+  {name:"Claude",url:"https://claude.ai/",icon:"🧠",note:"문서·글쓰기·코딩"},
+  {name:"A. (에이닷)",url:"https://www.skt-adot.com/",icon:"🇰🇷",note:"국내 AI 비서"},
+  {name:"Perplexity",url:"https://www.perplexity.ai/",icon:"🔎",note:"출처 기반 검색"}
+];
+
 const categories = [
-  {id:"text",icon:"📝",name:"텍스트 생성 AI",subtitle:"AI 챗봇 / 글쓰기 / 검색",color:"#2563EB",gradient:"linear-gradient(135deg,#1E40AF 0%,#7C3AED 100%)",concept:"자연어 처리(NLP) 기술을 기반으로 사용자와의 대화를 통해 정보 요약, 질의응답, 다양한 텍스트 창작을 수행하는 인공지능입니다. 대규모 언어 모델(LLM)을 기반으로 인간의 언어를 깊이 있게 이해하고 구사합니다.",features:["대화형 질의응답 및 리서치 — 복잡한 맥락을 파악해 깊이 있는 답변과 브레인스토밍 지원","텍스트 생성 및 편집 — 보고서, 이메일, 소설, 시나리오 등 목적과 스타일에 맞는 결과물 생성"],useCases:["콘텐츠 제작 — 블로그, 광고 카피, SNS 게시물 초안 생성","업무 지원 — 회의록 요약, 보고서 작성, 코드 개발, 이메일 자동화","학습 보조 — 자료 정리, 아이디어 구체화, 브레인스토밍"],cautions:["환각(Hallucination) — AI가 없는 정보를 사실처럼 생성할 수 있어 사실 검증 필수","저작권·표절 위험 — 기존 문헌과 유사한 문장 생성 가능, 출처 확인 필요","편향과 차별 — 학습 데이터의 편향이 결과물에 반영될 수 있음","개인정보 유출 — 입력 정보가 모델 학습에 재사용될 수 있으므로 민감 정보 입력 주의"],tools:[{name:"ChatGPT (GPT-4o/5)",url:"https://chat.openai.com/",desc:"글로벌 1위 AI, 대화·글쓰기·코딩·분석 만능",badge:"유쌤추천"},{name:"Google Gemini (제미나이)",url:"https://gemini.google.com/",desc:"구글 AI, Gmail·Docs·안드로이드 연동 강점",badge:"유쌤추천",alias:["제미나이","gemini","구글"]},{name:"Claude 4 (Anthropic)",url:"https://claude.ai/",desc:"긴 문서 분석·논리적 글쓰기, '인간적 문체' 호평",badge:"유쌤추천"},{name:"Perplexity Pro",url:"https://www.perplexity.ai/",desc:"출처 기반 AI 검색, 리서치 특화",badge:"유쌤추천"},{name:"Microsoft Copilot",url:"https://copilot.microsoft.com/",desc:"MS 오피스(Word·Excel·PPT) 통합 업무 도구"},{name:"Grok (xAI)",url:"https://x.ai/grok",desc:"실시간 트렌드 반영, X(트위터) 연동"},{name:"뤼튼 (Wrtn.ai)",url:"https://wrtn.ai/",desc:"한국어 특화, GPT·Claude 등 무료 통합 제공",badge:"국내"},{name:"네이버 HyperCLOVA X",url:"https://clova.ai/",desc:"한국어·문화·법률 이해도 최고, 공공·기업 실무",badge:"국내"},{name:"Jasper",url:"https://www.jasper.ai/",desc:"마케팅 콘텐츠 전문 AI 작성 도구"},{name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"노션 통합 문서 작성·요약·정리"}]},
+  {id:"text",icon:"📝",name:"텍스트 생성 AI",subtitle:"AI 챗봇 / 글쓰기 / 검색",color:"#2563EB",gradient:"linear-gradient(135deg,#1E40AF 0%,#7C3AED 100%)",concept:"자연어 처리(NLP) 기술을 기반으로 사용자와의 대화를 통해 정보 요약, 질의응답, 다양한 텍스트 창작을 수행하는 인공지능입니다. 대규모 언어 모델(LLM)을 기반으로 인간의 언어를 깊이 있게 이해하고 구사합니다.",features:["대화형 질의응답 및 리서치 — 복잡한 맥락을 파악해 깊이 있는 답변과 브레인스토밍 지원","텍스트 생성 및 편집 — 보고서, 이메일, 소설, 시나리오 등 목적과 스타일에 맞는 결과물 생성"],useCases:["콘텐츠 제작 — 블로그, 광고 카피, SNS 게시물 초안 생성","업무 지원 — 회의록 요약, 보고서 작성, 코드 개발, 이메일 자동화","학습 보조 — 자료 정리, 아이디어 구체화, 브레인스토밍"],cautions:["환각(Hallucination) — AI가 없는 정보를 사실처럼 생성할 수 있어 사실 검증 필수","저작권·표절 위험 — 기존 문헌과 유사한 문장 생성 가능, 출처 확인 필요","편향과 차별 — 학습 데이터의 편향이 결과물에 반영될 수 있음","개인정보 유출 — 입력 정보가 모델 학습에 재사용될 수 있으므로 민감 정보 입력 주의"],tools:[{name:"ChatGPT (GPT-4o/5)",url:"https://chat.openai.com/",desc:"글로벌 1위 AI, 대화·글쓰기·코딩·분석 만능",badge:"유쌤추천"},{name:"Google Gemini (제미나이)",url:"https://gemini.google.com/",desc:"구글 AI, Gmail·Docs·안드로이드 연동 강점",badge:"유쌤추천",alias:["제미나이","gemini","구글"]},{name:"Claude (Anthropic)",url:"https://claude.ai/",desc:"긴 문서 분석·논리적 글쓰기·코딩에 강한 AI",badge:"국내인기"},{name:"Perplexity",url:"https://www.perplexity.ai/",desc:"출처 기반 AI 검색·리서치에 특화",badge:"국내인기"},{name:"Microsoft Copilot",url:"https://copilot.microsoft.com/",desc:"MS 오피스(Word·Excel·PPT) 통합 업무 도구"},{name:"A. (에이닷)",url:"https://www.skt-adot.com/",desc:"SK텔레콤의 국내 AI 비서·검색·대화 서비스",badge:"국내인기",alias:["에이닷","A.","adot"]},{name:"Grok (xAI)",url:"https://x.ai/grok",desc:"실시간 트렌드 반영, X(트위터) 연동"},{name:"뤼튼 (Wrtn.ai)",url:"https://wrtn.ai/",desc:"한국어 특화, GPT·Claude 등 무료 통합 제공",badge:"국내"},{name:"네이버 HyperCLOVA X",url:"https://clova.ai/",desc:"한국어·문화·법률 이해도 최고, 공공·기업 실무",badge:"국내"},{name:"Jasper",url:"https://www.jasper.ai/",desc:"마케팅 콘텐츠 전문 AI 작성 도구"},{name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"노션 통합 문서 작성·요약·정리"}]},
   {id:"image",icon:"🎨",name:"이미지 생성 AI",subtitle:"Text to Image / 디자인",color:"#DB2777",gradient:"linear-gradient(135deg,#BE185D 0%,#F59E0B 100%)",concept:"텍스트 설명(프롬프트)을 입력으로 받아 시각적 결과물을 자동 생성하는 기술입니다. 확산 모델(Diffusion Model) 기반으로 세상에 없던 이미지를 만들어냅니다.",features:["텍스트 기반 시각화(Text-to-Image) — 키워드·문장을 분석해 구체적 이미지로 변환","다양한 스타일 구현 — 사진, 일러스트, 유화, 3D 렌더링 등 다양한 화풍 적용"],useCases:["디자인 및 브랜딩 — 시제품 콘셉트, 로고, 웹 그래픽 빠른 시각화","콘텐츠 마케팅 — 블로그, SNS, 광고 캠페인 시각 자료 제작","예술·엔터테인먼트 — 콘셉트 아트, 캐릭터 디자인, 가상 배경"],cautions:["저작권·표절 위험 — 특정 작가 스타일 모방 시 분쟁 가능","딥페이크 위험 — 유명인 합성 이미지를 통한 허위·조작 가능성"],tools:[{name:"Google Gemini (나노바나나/제미나이)",url:"https://gemini.google.com/",desc:"구글 Gemini 내 이미지 생성, 나노바나나 모델",badge:"유쌤추천",alias:["제미나이","gemini","나노바나나"]},{name:"Midjourney (v7+)",url:"https://www.midjourney.com/",desc:"디자이너 원픽, 압도적 예술적 퀄리티"},{name:"GPT 이미지 (DALL·E)",url:"https://chat.openai.com/",desc:"ChatGPT 내 이미지 생성, 프롬프트 이해도 최고"},{name:"Nano Banana 2",url:"https://nanobanana.com/",desc:"한국인 캐릭터·인물 묘사 정교함, 마케터 인기 급상승",badge:"HOT"},{name:"Stable Diffusion",url:"https://dreamstudio.ai/",desc:"오픈소스, 커스터마이징·자유 수정 강점"},{name:"Adobe Firefly",url:"https://firefly.adobe.com/",desc:"포토샵·일러스트 연동, 상업용 안정성"},{name:"Grok Imagine",url:"https://x.ai/grok",desc:"xAI의 이미지 생성 기능",badge:"NEW"},{name:"Seedream (씨드림)",url:"https://seedream.ai/",desc:"바이트댄스의 이미지 생성 모델",badge:"NEW"},{name:"Flux (플럭스)",url:"https://flux.ai/",desc:"차세대 고품질 이미지 생성 모델",badge:"NEW"},{name:"Recraft (리크래프트)",url:"https://www.recraft.ai/",desc:"벡터·디자인 특화 이미지 생성"},{name:"Ideogram (이디오그램)",url:"https://ideogram.ai/",desc:"텍스트 렌더링에 강점"},{name:"Leonardo AI",url:"https://leonardo.ai/",desc:"게임·캐릭터·3D 콘셉트 아트 특화"},{name:"Canva AI",url:"https://www.canva.com/",desc:"이미지 생성+편집+배치+리사이즈 통합"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"한국 특화 디자인 템플릿+AI 이미지",badge:"국내"}]},
   {id:"video",icon:"🎬",name:"영상 생성 AI",subtitle:"Text/Image to Video / AI 아바타",color:"#DC2626",gradient:"linear-gradient(135deg,#B91C1C 0%,#F97316 100%)",concept:"텍스트, 이미지, 음성 등 여러 형태의 데이터를 조합해 새로운 영상을 제작하는 생성형 AI입니다.",features:["다양한 입력 기반 영상 생성 — 텍스트·이미지·음성을 조합한 영상 자동 제작","AI 아바타·캐릭터 구현 — 가상 인물이 텍스트에 맞춰 말하고 움직이는 영상"],useCases:["마케팅·홍보 — 제품 소개, SNS 광고, 기업 홍보 영상","교육·정보 전달 — 직원 교육, 온라인 강의, 뉴스 브리핑","엔터테인먼트 — 애니메이션, 단편 영화, 뮤직비디오 초기 제작"],cautions:["허위·조작 영상 — 딥페이크를 통한 가짜뉴스·평판 피해 위험","저작권·초상권 — 기존 영상 무단 활용·얼굴 합성 시 권리 침해","유해 콘텐츠 — 딥페이크의 범죄 악용, 발견 시 즉시 신고 필요"],tools:[{name:"Google Veo 3 (제미나이)",url:"https://deepmind.google/technologies/veo",desc:"구글, 영상+음성 동시 생성 시대를 개척",badge:"유쌤추천",alias:["제미나이","gemini","veo"]},{name:"Google Flow",url:"https://flow.google/",desc:"구글 AI 영상 생성·편집 통합 도구",badge:"유쌤추천"},{name:"OpenAI Sora 2",url:"https://openai.com/sora",desc:"실사급 60초+ 고품질 영상 생성"},{name:"Kling 3 (클링)",url:"https://klingai.com/",desc:"사실적 물리법칙, Sora 넘었다는 평가",badge:"HOT"},{name:"Runway Gen-4",url:"https://runwayml.com/",desc:"글로벌 1위, 영상 생성+편집 통합 플랫폼"},{name:"Seedance 2 (바이트댄스)",url:"https://seedance.ai/",desc:"Sora·Veo 성능 넘어선 최신 모델",badge:"NEW"},{name:"HaiLuo AI (하이루오)",url:"https://hailuoai.video/",desc:"중국 기반, 한국 사용자 증가세"},{name:"Vidu (생수 테크놀로지)",url:"https://www.vidu.com/",desc:"중국 기반 비디오 생성 AI"},{name:"Pika",url:"https://pika.art/",desc:"숏폼 영상 강점, 텍스트/이미지→영상"},{name:"Luma Dream Machine",url:"https://lumalabs.ai/dream-machine",desc:"3D·영상 생성 전문"},{name:"Synthesia",url:"https://www.synthesia.io/",desc:"AI 아바타 프레젠테이션 영상 1위",badge:"아바타"},{name:"HeyGen",url:"https://www.heygen.com/",desc:"AI 아바타 마케팅·다국어 더빙",badge:"아바타"},{name:"DeepBrain AI",url:"https://www.deepbrain.io/",desc:"국내 AI 아바타 플랫폼",badge:"국내"}]},
   {id:"music",icon:"🎵",name:"음악 / 오디오 생성 AI",subtitle:"AI 작곡 / 음성 합성 / 나레이션",color:"#7C3AED",gradient:"linear-gradient(135deg,#6D28D9 0%,#EC4899 100%)",concept:"텍스트 설명이나 장르·분위기 등 간단한 조건만으로 완성도 높은 음악을 작곡·편곡하거나, 고품질 AI 음성·나레이션을 생성하는 AI입니다.",features:["맞춤형 음악 작곡 — 장르, 악기, 템포, 분위기를 텍스트로 지정해 작곡","고품질 음성 합성(TTS) — 다양한 연령·성별 목소리 생성, 감정·톤 조절","음성 복제(Voice Cloning) — 짧은 음성 데이터로 특정인 목소리 학습·복제"],useCases:["BGM 제작 — 유튜브, 광고, 게임, 팟캐스트 배경음악","나레이션·더빙 — 유튜브 내레이션, 교육 콘텐츠, 오디오북 더빙","음악 교육 — 이론 학습, 편곡 아이디어, 작곡 영감 도구"],cautions:["창작자 권리 침해 — 기존 음악과 유사한 멜로디 생성 시 저작권 문제","인격권 침해 — 동의 없는 목소리 복제는 퍼블리시티권 침해","보이스피싱 악용 — 합성 음성의 범죄 활용 위험","표절·창작성 논란 — AI 음악의 독창성에 대한 사회적 논의 진행 중"],tools:[{name:"Suno AI (v4/v5)",url:"https://suno.ai/",desc:"가사 입력으로 K-Pop~발라드 완성곡 생성, 1위",badge:"유쌤추천"},{name:"Udio",url:"https://www.udio.com/",desc:"음악적 완성도 최고, 인디 뮤지션들이 영감 도구로 활용",badge:"유쌤추천"},{name:"ElevenLabs",url:"https://elevenlabs.io/",desc:"AI 음성 합성·더빙 1위, 유튜브 나레이션 필수",badge:"유쌤추천"},{name:"타입캐스트 (TypeCast)",url:"https://typecast.ai/",desc:"한국어 AI 음성 특화, 교육·유튜브 더빙 인기",badge:"국내"},{name:"포자랩스 (Viodio.io)",url:"https://viodio.io/",desc:"저작권 안전 고품질 음원, 광고 마케터 선호",badge:"국내"},{name:"수퍼톤 (Supertone)",url:"https://supertone.ai/",desc:"한국어 음성 합성 강점, 국내 스타트업",badge:"국내"},{name:"MusicFX (Google)",url:"https://aitestkitchen.withgoogle.com/tools/music-fx",desc:"구글 AI 음악 생성 실험 도구",alias:["제미나이"]},{name:"Fish Audio",url:"https://fish.audio/",desc:"다국어 음성 복제·합성 플랫폼"},{name:"OpenAI TTS",url:"https://platform.openai.com/docs/guides/text-to-speech",desc:"OpenAI 고품질 텍스트→음성 변환"},{name:"Murf AI",url:"https://murf.ai/",desc:"비즈니스 나레이션·프레젠테이션 특화"},{name:"AIVA",url:"https://aiva.ai/",desc:"클래식·영화음악 작곡 전문"},{name:"SOUNDRAW",url:"https://soundraw.io/",desc:"커스텀 BGM 생성·편집"},{name:"PlayHT",url:"https://play.ht/",desc:"AI 음성 API·팟캐스트 변환"}]},
   {id:"editing",icon:"🎞️",name:"영상 편집 / 숏폼 제작",subtitle:"AI 편집 / 자막 / 숏폼",color:"#0D9488",gradient:"linear-gradient(135deg,#0F766E 0%,#34D399 100%)",concept:"AI 기술을 활용해 영상 편집, 자막 생성, 음성 삽입, 숏폼 콘텐츠 제작을 빠르고 쉽게 도와주는 도구입니다.",features:["AI 자동 자막 — 음성 인식 기반 자동 자막 생성 및 다국어 번역","숏폼 최적화 — 릴스, 쇼츠, 틱톡에 최적화된 세로형 편집·리프레임","스크립트 기반 편집 — 텍스트를 편집하면 영상이 자동으로 편집되는 방식"],useCases:["유튜브·SNS — 영상 콘텐츠 편집, 자막 삽입, 효과 적용","숏폼 제작 — 릴스, 쇼츠, 틱톡 영상 빠르게 제작","교육 영상 — 강의 녹화 편집, AI 음성 더빙, 자막 번역"],cautions:["저작권 — 배경음악, 효과음 등 소스 라이선스 확인 필요","품질 한계 — AI 자동 편집은 세밀한 연출에 한계가 있을 수 있음","의존성 — 특정 플랫폼 종속 시 전환 비용 발생 가능"],tools:[{name:"CapCut (캡컷)",url:"https://www.capcut.com/",desc:"숏폼 1위, 자동 자막 정확도·스타일 옵션 압도적",badge:"유쌤추천"},{name:"VREW (브루)",url:"https://vrew.voyagerx.com/",desc:"한국인 최애, AI 자막+음성 삽입 숏폼 표준",badge:"유쌤추천"},{name:"Adobe Premiere Pro",url:"https://www.adobe.com/products/premiere.html",desc:"전문가용, AI Sensei 자동 컷·리프레임 통합",badge:"유쌤추천"},{name:"Descript",url:"https://www.descript.com/",desc:"스크립트 기반 편집, 텍스트 수정=영상 편집"},{name:"Filmora",url:"https://filmora.wondershare.com/",desc:"AI 편집 기능 탑재, 초보자 친화적"},{name:"Meta Edits",url:"https://about.instagram.com/blog/announcements/introducing-edits",desc:"메타 출시, 캡컷 대항마 숏폼 도구",badge:"NEW"},{name:"Fliki",url:"https://fliki.ai/",desc:"텍스트→비디오+음성 변환 AI 숏폼 도구"},{name:"InVideo AI",url:"https://invideo.io/",desc:"프롬프트로 영상 자동 생성·편집"},{name:"Vizard",url:"https://vizard.ai/",desc:"롱폼→숏폼 자동 클립 추출·편집"},{name:"Kapwing",url:"https://www.kapwing.com/",desc:"웹 기반 AI 영상 편집·자막·리사이즈"},{name:"Pictory",url:"https://pictory.ai/",desc:"긴 글·블로그를 숏폼 영상으로 변환"},{name:"Canva Video",url:"https://www.canva.com/",desc:"간편 영상 제작·편집·디자인 통합"}]},
-  {id:"presentation",icon:"📊",name:"프레젠테이션 / 문서 생성",subtitle:"AI PPT / 보고서 / 리서치",color:"#0369A1",gradient:"linear-gradient(135deg,#075985 0%,#38BDF8 100%)",concept:"프롬프트만으로 프레젠테이션을 자동 생성하거나, AI가 자율적으로 리서치·보고서 작성까지 수행하는 도구입니다.",features:["프레젠테이션 자동 생성 — 텍스트 입력만으로 슬라이드 구성·디자인 완성","AI 리서치·보고서 — 주제 입력 시 자료 수집·분석·문서화 자동 수행","인포그래픽 자동화 — 텍스트를 시각적 다이어그램·차트로 자동 변환"],useCases:["프레젠테이션 — 기업 발표, 교육 자료, 제안서 빠른 제작","보고서·리서치 — AI가 자율적으로 조사·분석·문서 작성","문서 자동화 — 반복적인 보고서, 기획안, 제안서 초안 생성"],cautions:["정확성 검증 — AI가 생성한 데이터·통계는 반드시 팩트체크 필요","디자인 한계 — 자동 생성 디자인이 브랜드 가이드에 맞지 않을 수 있음","보안 — 내부 기밀 자료를 AI에 입력할 때 유출 주의"],tools:[{name:"Manus AI",url:"https://manus.im/",desc:"자율형 AI 에이전트, 리서치→보고서 자동 작성",badge:"유쌤추천"},{name:"Skywork AI",url:"https://skywork.ai/",desc:"AI 자동 프레젠테이션·문서 생성",badge:"유쌤추천"},{name:"Gamma AI",url:"https://gamma.app/",desc:"'PPT 파괴자', 프롬프트→프레젠테이션 1분 완성",badge:"유쌤추천"},{name:"Beautiful.ai",url:"https://www.beautiful.ai/",desc:"AI 기반 슬라이드 디자인 자동화"},{name:"Napkin AI",url:"https://www.napkin.ai/",desc:"텍스트→인포그래픽·다이어그램 자동 변환",badge:"NEW"},{name:"Microsoft 365 Copilot",url:"https://copilot.microsoft.com/",desc:"엑셀·워드·PPT 내 직접 작동, 기업용 최다 보급"},{name:"Google Gemini (Slides/제미나이)",url:"https://gemini.google.com/",desc:"구글 슬라이드 연동 AI 프레젠테이션",alias:["제미나이","gemini"]},{name:"Canva Docs/PPT",url:"https://www.canva.com/",desc:"디자인+문서·슬라이드 AI 자동 생성"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"카드뉴스·썸네일·상세페이지 한국 특화 템플릿",badge:"국내"},{name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"문서 초안·정리·요약·지식 관리 통합"}]},
+  {id:"presentation",icon:"📊",name:"프레젠테이션 / 문서 생성",subtitle:"AI PPT / 보고서 / 리서치",color:"#0369A1",gradient:"linear-gradient(135deg,#075985 0%,#38BDF8 100%)",concept:"프롬프트만으로 프레젠테이션을 자동 생성하거나, AI가 자율적으로 리서치·보고서 작성까지 수행하는 도구입니다.",features:["프레젠테이션 자동 생성 — 텍스트 입력만으로 슬라이드 구성·디자인 완성","AI 리서치·보고서 — 주제 입력 시 자료 수집·분석·문서화 자동 수행","인포그래픽 자동화 — 텍스트를 시각적 다이어그램·차트로 자동 변환"],useCases:["프레젠테이션 — 기업 발표, 교육 자료, 제안서 빠른 제작","보고서·리서치 — AI가 자율적으로 조사·분석·문서 작성","문서 자동화 — 반복적인 보고서, 기획안, 제안서 초안 생성"],cautions:["정확성 검증 — AI가 생성한 데이터·통계는 반드시 팩트체크 필요","디자인 한계 — 자동 생성 디자인이 브랜드 가이드에 맞지 않을 수 있음","보안 — 내부 기밀 자료를 AI에 입력할 때 유출 주의"],tools:[{name:"Manus AI",url:"https://manus.im/",desc:"자율형 AI 에이전트, 리서치→보고서 자동 작성",badge:"유쌤추천"},{name:"Skywork AI",url:"https://skywork.ai/",desc:"AI 자동 프레젠테이션·문서 생성",badge:"유쌤추천"},{name:"Gamma AI",url:"https://gamma.app/",desc:"'PPT 파괴자', 프롬프트→프레젠테이션 1분 완성",badge:"유쌤추천"},{name:"Beautiful.ai",url:"https://www.beautiful.ai/",desc:"AI 기반 슬라이드 디자인 자동화"},{name:"Napkin AI",url:"https://www.napkin.ai/",desc:"텍스트→인포그래픽·다이어그램 자동 변환",badge:"NEW"},{name:"Microsoft 365 Copilot",url:"https://copilot.microsoft.com/",desc:"엑셀·워드·PPT 내 직접 작동, 기업용 최다 보급"},{name:"Google Gemini (Slides/제미나이)",url:"https://gemini.google.com/",desc:"구글 슬라이드 연동 AI 프레젠테이션",alias:["제미나이","gemini"]},{name:"Gemini Notebook (구 NotebookLM)",url:"https://notebook.google.com/",desc:"출처 기반 리서치·요약·오디오·슬라이드 자료 생성",badge:"HOT",alias:["노트북LM","NotebookLM","제미나이 노트북","Gemini Notebook"]},{name:"Canva Docs/PPT",url:"https://www.canva.com/",desc:"디자인+문서·슬라이드 AI 자동 생성"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"카드뉴스·썸네일·상세페이지 한국 특화 템플릿",badge:"국내"},{name:"Notion AI",url:"https://www.notion.so/product/ai",desc:"문서 초안·정리·요약·지식 관리 통합"}]},
   {id:"allinone",icon:"🌐",name:"올인원 AI 플랫폼",subtitle:"통합 AI / 멀티모달",color:"#4F46E5",gradient:"linear-gradient(135deg,#3730A3 0%,#06B6D4 100%)",concept:"텍스트, 이미지, 음성 등 여러 유형의 데이터를 동시에 이해하고 새로운 결과물을 만들어내는 차세대 생성형 AI입니다.",features:["복합 데이터 처리 — 음성+이미지 동시 이해, 텍스트·영상·음성 결과 제공","상황 인지·추론 — 대화 맥락, 감정, 환경을 종합 분석해 개인화된 결과","다중 AI 모델 통합 — 하나의 플랫폼에서 여러 AI 모델을 선택적으로 활용"],useCases:["차세대 스마트 비서 — 음성 인식 + 이미지 파악 + 텍스트/음성 안내","실감형 콘텐츠 — 스토리를 이미지·음악·나레이션으로 자동 변환","지능형 교육 — 학습자 반응 인식, 난이도 자동 조절"],cautions:["편향 증폭 — 각 데이터의 편향이 결합되어 차별적 표현 강화 가능","정교한 허위정보 — 텍스트+음성+영상 결합 딥페이크는 탐지가 매우 어려움","프라이버시 침해 — 다양한 데이터를 합쳐 개인 감정·사적 정보 추론 가능"],tools:[{name:"젠스파크 (GenSpark)",url:"https://genspark.ai/",desc:"AI 에이전트 기반 올인원 검색·생성 플랫폼",badge:"유쌤추천"},{name:"ChatGPT (멀티모달)",url:"https://chat.openai.com/",desc:"텍스트·이미지·코딩·파일분석 모든 것을 하나로"},{name:"Google Gemini (제미나이)",url:"https://gemini.google.com/",desc:"검색·문서·모바일 연동 통합 에이전트",alias:["제미나이","gemini"]},{name:"Claude",url:"https://claude.ai/",desc:"텍스트·코딩·대용량 파일 분석 통합"},{name:"뤼튼 (Wrtn)",url:"https://wrtn.ai/",desc:"한국 'AI 포털', 월 500만 사용자, 여러 모델 무료",badge:"국내"},{name:"캐럿 (Carat)",url:"https://www.carat.im/",desc:"글쓰기·이미지·영상·음악 한곳에서 제작",badge:"국내"},{name:"Perplexity",url:"https://www.perplexity.ai/",desc:"검색형 AI 선두, 정보 요약+출처 제시"},{name:"Canva",url:"https://www.canva.com/",desc:"디자인+영상+문서+AI 올인원 통합"},{name:"미리캔버스",url:"https://www.miricanvas.com/",desc:"한국 특화 디자인+AI 통합 플랫폼",badge:"국내"},{name:"Microsoft Copilot",url:"https://copilot.microsoft.com/",desc:"M365 전체 업무 통합 멀티모달"},{name:"NAVER 클로바X",url:"https://clova.ai/",desc:"네이버 한국어 멀티모달 AI",badge:"국내"},{name:"A. (A dot)",url:"https://adot.ai/",desc:"SK 멀티모달 AI 비서",badge:"국내"}]},
-  {id:"agent",icon:"🤖",name:"업무 자동화 / AI 에이전트",subtitle:"자동화 / 바이브코딩 / 에이전트",color:"#EA580C",gradient:"linear-gradient(135deg,#C2410C 0%,#FACC15 100%)",concept:"사용자의 지시를 받아 스스로 계획을 세우고 여러 도구를 연결·실행하여 복잡한 작업을 자율적으로 수행하는 AI입니다. 2026년 기업용 앱의 약 40%에 AI 에이전트가 탑재될 전망입니다.",features:["자율형 작업 수행 — 목표를 이해하고 스스로 단계별 계획을 세워 실행","다중 앱 연동 — 이메일, 캘린더, 문서, 메신저 등 여러 도구를 연결","바이브코딩 — AI와 대화만으로 웹페이지·업무 도구를 직접 제작"],useCases:["업무 자동화 — 반복 업무 제거, 워크플로우 자동 연결","앱·웹 개발 — 코딩 없이 AI 대화로 서비스 제작 (바이브코딩)","데이터 처리 — 여러 소스의 데이터를 수집·분석·보고서화"],cautions:["보안 위험 — 자율 실행 중 민감한 데이터 접근·유출 가능성","오류 전파 — 잘못된 판단이 연쇄적으로 작업에 영향을 미칠 수 있음","과도한 의존 — AI 에이전트에 대한 과도한 의존은 업무 이해력 저하 우려"],tools:[{name:"Make (구 Integromat)",url:"https://www.make.com/",desc:"노코드 비주얼 고급 자동화 플랫폼",badge:"유쌤추천"},{name:"n8n",url:"https://n8n.io/",desc:"오픈소스 워크플로우 자동화, 개발자형",badge:"유쌤추천"},{name:"Zapier AI",url:"https://zapier.com/",desc:"가장 대중적 앱 간 자동화, 5,000+ 연동"},{name:"Coze (코즈)",url:"https://www.coze.com/",desc:"코딩 없이 나만의 AI 봇 제작·배포, 에이전트 열풍 주도",badge:"HOT"},{name:"Manus AI",url:"https://manus.im/",desc:"자율형 에이전트, 작업 수행형 AI"},{name:"Claude Code / Cowork",url:"https://claude.ai/",desc:"파일 접근·데이터 분석·병렬 처리 에이전트"},{name:"ChatGPT Custom GPTs",url:"https://chat.openai.com/",desc:"맞춤형 AI 봇 직접 제작·공유"},{name:"Cursor",url:"https://cursor.sh/",desc:"AI 코드 에디터, 바이브코딩 대표",badge:"HOT"},{name:"Replit Agent",url:"https://replit.com/",desc:"대화로 앱 제작 바이브코딩 플랫폼"},{name:"MS Power Automate + Copilot",url:"https://powerautomate.microsoft.com/",desc:"M365 업무 통합 자동화+AI 에이전트"},{name:"Google Workspace + Gemini",url:"https://workspace.google.com/",desc:"AppSheet·Apps Script+Gemini 자동화",alias:["제미나이","gemini"]},{name:"AutoGen (Microsoft)",url:"https://github.com/microsoft/autogen",desc:"멀티 에이전트 프레임워크 오픈소스"}]},
+  {id:"vibecoding",icon:"⌨️",name:"바이브코딩 / AI 개발",subtitle:"AI 코딩 / 앱·웹 제작 / 개발 에이전트",color:"#4F46E5",gradient:"linear-gradient(135deg,#172554 0%,#4338CA 52%,#0EA5E9 100%)",concept:"자연어로 원하는 기능을 설명하면 AI가 코드를 작성·수정·테스트하고, 웹사이트나 앱을 실제 배포 가능한 형태로 만들어주는 개발 방식입니다. 2026년에는 IDE형 코딩 에이전트와 브라우저 기반 AI 앱 빌더가 함께 빠르게 성장하고 있습니다.",features:["AI 코딩 에이전트 — 프로젝트 전체 문맥을 읽고 코드 작성·수정·테스트를 단계적으로 수행","프롬프트 기반 앱 제작 — 자연어 설명만으로 UI·DB·인증·배포까지 빠르게 구성","개발 워크플로우 통합 — Git, 터미널, 데이터베이스, 배포 서비스와 연결"],useCases:["웹·앱 제작 — 랜딩페이지, 내부 업무툴, MVP, 교육용 앱 제작","프로토타이핑 — 아이디어를 빠르게 실제 동작하는 서비스로 검증","개발 생산성 — 반복 코딩, 디버깅, 리팩터링, 테스트, 문서화 자동화"],cautions:["보안 검토 — AI가 만든 코드의 인증·권한·API 키 처리 반드시 점검","유지보수 — 빠르게 만든 코드일수록 구조와 의존성 확인 필요","비용 관리 — 에이전트 반복 실행·대용량 컨텍스트 사용 시 비용 증가 가능","배포 전 검증 — 개인정보·결제·관리자 기능은 실제 운영 전 별도 테스트 필수"],tools:[{name:"Claude Code",url:"https://www.anthropic.com/claude-code",desc:"2026년 개발자 업무 사용이 크게 증가한 터미널 기반 AI 코딩 에이전트",badge:"2026 TOP",alias:["클로드 코드","claude"]},{name:"Cursor",url:"https://cursor.com/",desc:"프로젝트 전체 문맥 기반 AI 코드 편집·에이전트 작업에 강한 AI IDE",badge:"유쌤추천"},{name:"OpenAI Codex",url:"https://openai.com/codex/",desc:"코드 작성·수정·작업 위임 중심의 OpenAI 코딩 에이전트",badge:"HOT",alias:["코덱스","codex"]},{name:"GitHub Copilot",url:"https://github.com/features/copilot",desc:"GitHub·VS Code 생태계와 결합된 대표 AI 개발 도구"},{name:"Google AI Studio",url:"https://aistudio.google.com/",desc:"Gemini 모델 기반 앱 프로토타이핑·API 실험에 강한 구글 개발 환경",badge:"HOT",alias:["구글 AI 스튜디오","Gemini"]},{name:"Lovable",url:"https://lovable.dev/",desc:"비개발자도 프롬프트로 웹앱을 빠르게 제작하는 AI 앱 빌더",badge:"HOT"},{name:"Replit Agent",url:"https://replit.com/",desc:"브라우저에서 대화만으로 앱 개발·실행·배포까지 연결",badge:"유쌤추천"},{name:"v0 by Vercel",url:"https://v0.dev/",desc:"UI·프론트엔드 제작과 Vercel 배포 흐름에 강한 생성형 개발 도구"},{name:"Bolt.new",url:"https://bolt.new/",desc:"브라우저에서 풀스택 앱을 생성·실행하는 빠른 프로토타이핑 도구"},{name:"Windsurf",url:"https://windsurf.com/",desc:"에이전트 중심 코드 편집·개발 흐름을 제공하는 AI IDE"},{name:"Google Antigravity",url:"https://antigravity.google/",desc:"2026년 개발자 도구 조사에서 빠르게 부상한 Google의 AI 개발 환경",badge:"NEW"},{name:"Firebase Studio",url:"https://firebase.studio/",desc:"Firebase와 연결해 AI 앱 개발·테스트·배포를 지원"}]},
+{id:"agent",icon:"⚙️",name:"업무 자동화 / AI 에이전트",subtitle:"워크플로우 / 노코드 자동화 / AI 오케스트레이션",color:"#EA580C",gradient:"linear-gradient(135deg,#7C2D12 0%,#C2410C 46%,#D4A94F 100%)",concept:"여러 앱과 데이터를 연결해 반복 업무를 자동화하고, AI가 문서·이메일·데이터를 이해해 다음 행동까지 수행하도록 만드는 분야입니다. 2026년에는 단순 트리거 자동화를 넘어 AI 에이전트와 사람의 승인 단계를 결합한 워크플로우가 중심이 되고 있습니다.",features:["앱 간 워크플로우 연결 — 이메일·폼·스프레드시트·CRM·메신저 등을 자동 연결","AI 에이전트 오케스트레이션 — LLM이 내용을 판단해 분류·요약·응답·후속 작업 실행","사람 승인 단계 — 중요한 작업은 자동 실행 전 담당자 확인을 넣어 안전하게 운영","데이터 처리 자동화 — 수집·정리·변환·보고서 작성까지 반복 업무 자동 처리"],useCases:["마케팅 자동화 — 문의 수집, 리드 분류, 콘텐츠 배포, 후속 메시지","사무 자동화 — 이메일 요약, 일정·문서 생성, 보고서 업데이트","고객 지원 — 문의 분류, FAQ 응답 초안, 티켓 라우팅","데이터 업무 — 여러 서비스의 데이터를 통합하고 AI 분석 결과를 자동 전달"],cautions:["권한 최소화 — 연결 앱에는 필요한 범위의 권한만 부여","오류 전파 — 자동화가 잘못되면 여러 앱에 연쇄 반영될 수 있어 테스트 필수","비용·실행량 — 작업 횟수·API 호출량·AI 토큰 비용을 함께 관리","중요 작업 승인 — 결제·삭제·외부 전송 등은 사람 승인 단계를 두는 것이 안전"],tools:[{name:"n8n",url:"https://n8n.io/",desc:"AI 에이전트·복잡한 워크플로우·셀프호스팅에 강한 자동화 플랫폼",badge:"2026 TOP"},{name:"Make",url:"https://www.make.com/",desc:"시각적 시나리오 설계가 강점인 대표 노코드 업무자동화 플랫폼",badge:"유쌤추천"},{name:"Zapier",url:"https://zapier.com/",desc:"폭넓은 앱 연결과 쉬운 설정이 강점인 대중적 자동화 플랫폼",badge:"유쌤추천"},{name:"Microsoft Power Automate",url:"https://powerautomate.microsoft.com/",desc:"Microsoft 365·Teams·SharePoint 중심 기업 업무자동화에 강점",badge:"기업"},{name:"Workato",url:"https://www.workato.com/",desc:"대기업 통합·거버넌스 중심의 엔터프라이즈 자동화 플랫폼",badge:"기업"},{name:"Gumloop",url:"https://www.gumloop.com/",desc:"AI-native 방식으로 웹·문서·데이터 업무를 자동화하는 신흥 플랫폼",badge:"HOT"},{name:"Lindy",url:"https://www.lindy.ai/",desc:"이메일·일정·업무 수행형 AI 에이전트를 쉽게 구성하는 자동화 도구",badge:"HOT"},{name:"Pipedream",url:"https://pipedream.com/",desc:"API·코드·AI 작업을 유연하게 연결하는 개발자 친화 자동화"},{name:"Bardeen",url:"https://www.bardeen.ai/",desc:"브라우저 기반 반복 업무·웹 데이터 수집 자동화"},{name:"UiPath",url:"https://www.uipath.com/",desc:"RPA와 AI 에이전트를 결합한 기업용 자동화 플랫폼",badge:"기업"},{name:"Google Workspace + Gemini",url:"https://workspace.google.com/",desc:"Gmail·Docs·Sheets·Drive 기반 AI 업무 흐름과 자동화",alias:["제미나이","gemini"]},{name:"ChatGPT + Plugins",url:"https://chatgpt.com/",desc:"연결된 업무 앱과 AI 작업을 결합하는 범용 업무 에이전트 환경",badge:"HOT",alias:["챗GPT","ChatGPT"]}]},
+
 ];
 
-const badgeStyles={"유쌤추천":{bg:"#FEF3C7",text:"#B45309",border:"#FDE68A",icon:"⭐"},"국내":{bg:"#DBEAFE",text:"#1D4ED8",border:"#BFDBFE",icon:"🇰🇷"},"NEW":{bg:"#FCE7F3",text:"#BE185D",border:"#FBCFE8",icon:"✨"},"HOT":{bg:"#FEE2E2",text:"#B91C1C",border:"#FECACA",icon:"🔥"},"아바타":{bg:"#EDE9FE",text:"#6D28D9",border:"#DDD6FE",icon:"🧑"}};
+const badgeStyles={"2026 TOP":{bg:"#E0E7FF",text:"#3730A3",border:"#C7D2FE",icon:"🏆"},"기업":{bg:"#E2E8F0",text:"#334155",border:"#CBD5E1",icon:"🏢"},"유쌤추천":{bg:"#FEF3C7",text:"#B45309",border:"#FDE68A",icon:"⭐"},"국내인기":{bg:"#ECFDF5",text:"#047857",border:"#A7F3D0",icon:"📈"},"국내":{bg:"#DBEAFE",text:"#1D4ED8",border:"#BFDBFE",icon:"🇰🇷"},"NEW":{bg:"#FCE7F3",text:"#BE185D",border:"#FBCFE8",icon:"✨"},"HOT":{bg:"#FEE2E2",text:"#B91C1C",border:"#FECACA",icon:"🔥"},"아바타":{bg:"#EDE9FE",text:"#6D28D9",border:"#DDD6FE",icon:"🧑"}};
 function matchSearch(t,q){const s=q.toLowerCase();return t.name.toLowerCase().includes(s)||t.desc.toLowerCase().includes(s)||(t.alias&&t.alias.some(a=>a.toLowerCase().includes(s)))}
 function ToolCard({tool}){const b=tool.badge?badgeStyles[tool.badge]||badgeStyles["유쌤추천"]:null;return(<a href={tool.url} target="_blank" rel="noopener noreferrer" className="tool-card"><div style={{paddingRight:"24px"}}><div className="tool-name-row"><span className="tool-name">{tool.name}</span>{b&&<span className="tool-badge" style={{background:b.bg,color:b.text,borderColor:b.border}}>{b.icon} {tool.badge}</span>}</div><p className="tool-desc">{tool.desc}</p></div><span className="tool-arrow">↗</span></a>)}
 function InfoPanel({title,items,icon,color}){return(<div className="info-section"><div className="info-section-header"><span className="info-section-icon" style={{background:color+"14"}}>{icon}</span><span className="info-section-title">{title}</span></div><div className="info-items">{items.map((item,i)=>{const p=item.split(" — ");return(<div key={i} className="info-item"><span className="bullet" style={{color}}>●</span>{p.length>1?<span><strong>{p[0]}</strong> — {p[1]}</span>:<span>{item}</span>}</div>)})}</div></div>)}
@@ -181,19 +252,61 @@ function App(){
       <nav className="top-nav"><div className="top-nav-inner"><button onClick={goHome} className="home-btn">🏠 홈</button><span className="top-nav-title">유쌤클래스 AI 도구 모음집</span></div></nav>
       <div className="container">
         <div className="hdr">
-          <div className="hdr-badge"><span className="hdr-badge-ico">🤖</span> 친절한유성쌤이 추천하는</div>
-          <h1 className="hdr-title">AI 도구 모음집 2026</h1>
+          <div className="hdr-badge"><span className="hdr-badge-ico">🤖</span> 2026년 10월 업데이트 · 친절한유성쌤 추천</div>
+          <h1 className="hdr-title">AI Tool Directory 2026</h1>
           <p className="hdr-stats">{categories.length}개 카테고리 · {totalTools}개 AI 도구</p>
-          <p className="hdr-sub">유쌤클래스 | AI콘텐츠마케팅연구소</p>
+          <p className="hdr-sub">유쌤클래스 · AI콘텐츠마케팅연구소 · Korea Edition</p>
         </div>
 
         {showHome&&(
           <div className="intro-card"><p className="intro-text">
-            AI 도구는 많지만, 어떤 걸 써야 할지 막막하셨죠? <span className="highlight">친절한유성쌤</span>이 강의 현장에서 수강생들과 함께 직접 써보고 검증한 AI 도구 <span className="emphasis">{totalTools}개</span>를 <span className="emphasis">8개 카테고리</span>로 한눈에 정리했습니다.<br/><br/>콘텐츠 기획부터 마케팅, 영상 제작, 업무 자동화까지 — 이 모음집 하나면 2026년 AI 활용, 어렵지 않습니다.<br/><span className="cta">📌 북마크 필수인 AI 도구 가이드, 지금 바로 확인해 보세요!</span>
+            AI 도구는 많지만, 어떤 걸 써야 할지 막막하셨죠? <span className="highlight">친절한유성쌤</span>이 강의 현장에서 수강생들과 함께 직접 써보고 검증한 AI 도구 <span className="emphasis">{totalTools}개</span>를 <span className="emphasis">{categories.length}개 카테고리</span>로 한눈에 정리했습니다. 2026년 10월 대한민국에서 활용도가 높은 주요 AI 서비스도 함께 반영했습니다.<br/><br/>콘텐츠 기획부터 마케팅, 영상 제작, 업무 자동화까지 — 이 모음집 하나면 2026년 AI 활용, 어렵지 않습니다.<br/><span className="cta">📌 북마크 필수인 AI 도구 가이드, 지금 바로 확인해 보세요!</span>
           </p></div>
         )}
 
-        <div className="search-wrap"><span className="search-ico">🔍</span><input type="text" className="search-input" placeholder="AI 도구 이름 또는 키워드 검색... (예: 제미나이, 캡컷)" value={search} onChange={(e)=>{setSearch(e.target.value);setSelected(null)}}/></div>
+        {showHome&&(
+          <section className="kr-popular" aria-label="2026년 10월 대한민국 주요 AI">
+            <div className="kr-popular-head">
+              <div>
+                <div className="kr-popular-title">🇰🇷 대한민국에서 많이 활용하는 주요 AI</div>
+                <div className="kr-popular-sub">웹·모바일 이용 흐름을 참고한 대표 서비스 · 순위는 조사 방식에 따라 달라질 수 있습니다.</div>
+              </div>
+              <span className="kr-popular-date">2026.10 기준</span>
+            </div>
+            <div className="kr-popular-grid">
+              {koreaPopular.map((tool,i)=>(
+                <a key={i} href={tool.url} target="_blank" rel="noopener noreferrer" className="kr-popular-link">
+                  <span className="kr-popular-icon">{tool.icon}</span>
+                  <span className="kr-popular-name">{tool.name}</span>
+                  <span className="kr-popular-note">{tool.note}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        
+        {showHome&&(
+          <section className="brand-panel" aria-label="유쌤클래스 공식 채널">
+            <div className="brand-head">
+              <div>
+                <div className="brand-title">🚀 유쌤클래스 · 친절한유성쌤 공식 채널</div>
+                <div className="brand-desc">AI 교육 · 콘텐츠마케팅 · 실전 활용 자료와 최신 소식을 한곳에서 확인하세요.</div>
+              </div>
+              <a className="brand-home" href="https://www.yussamclass.com/" target="_blank" rel="noopener noreferrer">🏠 유쌤클래스 홈페이지 ↗</a>
+            </div>
+            <div className="brand-social-grid">
+              {socialLinks.map((s,i)=>(
+                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="brand-social-link">
+                  <span className="brand-social-icon" style={{background:s.color}}>{s.icon}</span>
+                  <span className="brand-social-label">{s.name}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="search-wrap"><span className="search-ico">🔍</span><input type="text" className="search-input" placeholder="AI 도구 검색... (예: Claude Code, Cursor, n8n, 제미나이, 캡컷)" value={search} onChange={(e)=>{setSearch(e.target.value);setSelected(null)}}/></div>
 
         {search.trim()&&!selected&&(<div style={{animation:"fadeIn 0.3s ease"}}>{filteredTools.length>0?(<React.Fragment><p style={{fontSize:"14px",color:"#6B7280",margin:"0 0 14px 4px"}}>검색 결과 <strong style={{color:"#111827"}}>{filteredTools.length}개</strong></p><div className="search-grid">{filteredTools.map((t,i)=>(<div key={i} style={{position:"relative"}}><ToolCard tool={t}/><span className="search-cat-tag" style={{color:t.category.color,background:t.category.color+"10"}}>{t.category.icon} {t.category.name}</span></div>))}</div></React.Fragment>):(<div style={{textAlign:"center",padding:"48px 0",color:"#6B7280"}}><div style={{fontSize:"40px",marginBottom:"12px"}}>🔍</div><p style={{fontSize:"15px"}}>"{search}"에 대한 결과가 없습니다</p></div>)}</div>)}
 
