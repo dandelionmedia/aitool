@@ -422,6 +422,494 @@ body::after{
   .hero-main-icon{width:60px;height:60px}
 }
 
+
+/* ===== FINAL RESPONSIVE READABILITY UPGRADE ===== */
+
+/* Base readability */
+body{
+  font-size:17px;
+  line-height:1.7;
+}
+.container{
+  max-width:1280px;
+  padding-left:28px;
+  padding-right:28px;
+}
+.hdr{
+  padding-top:72px;
+  padding-bottom:30px;
+}
+.hdr-title{
+  font-size:60px;
+  line-height:1.08;
+  letter-spacing:-.06em;
+}
+.hdr-stats{
+  font-size:20px;
+}
+.hdr-sub{
+  font-size:16px;
+}
+.hdr-updated{
+  font-size:14px;
+}
+.hdr-badge{
+  font-size:15px;
+  padding:10px 20px;
+}
+.intro-card{
+  max-width:960px;
+  padding:42px 46px;
+  border-radius:28px;
+}
+.intro-text{
+  font-size:20px;
+  line-height:1.9;
+}
+.intro-text .cta{
+  font-size:20px;
+}
+.brand-panel,.kr-popular{
+  padding:26px;
+  border-radius:24px;
+}
+.brand-title{
+  font-size:22px;
+}
+.brand-desc{
+  font-size:15.5px;
+}
+.brand-home{
+  font-size:15px;
+  padding:12px 17px;
+}
+.brand-social-link{
+  min-height:92px;
+}
+.brand-social-label{
+  font-size:14px;
+}
+.kr-popular-title{
+  font-size:21px;
+}
+.kr-popular-sub{
+  font-size:15px;
+}
+.kr-popular-date{
+  font-size:13px;
+}
+.kr-popular-link{
+  min-height:108px;
+}
+.kr-popular-name{
+  font-size:16px;
+}
+.kr-popular-note{
+  font-size:13px;
+}
+.search-wrap{
+  max-width:840px;
+  margin-bottom:38px;
+}
+.search-input{
+  font-size:18px;
+  padding:19px 24px 19px 54px;
+  border-radius:18px;
+}
+.cat-grid{
+  gap:19px;
+}
+.cat-card{
+  min-height:168px;
+  padding:27px;
+  border-radius:21px;
+}
+.cat-icon{
+  width:60px;
+  height:60px;
+  font-size:29px;
+  border-radius:16px;
+}
+.cat-name{
+  font-size:19.5px;
+}
+.cat-sub{
+  font-size:15px;
+  line-height:1.5;
+}
+.cat-count{
+  font-size:13px;
+}
+.hero-banner{
+  padding:46px;
+  border-radius:27px;
+}
+.hero-title{
+  font-size:38px;
+}
+.hero-subtitle{
+  font-size:18px;
+}
+.hero-concept{
+  font-size:18px;
+  line-height:1.85;
+}
+.info-toggle-label{
+  font-size:17px;
+}
+.info-panel{
+  padding:30px;
+}
+.info-section-title{
+  font-size:18px;
+}
+.info-item{
+  font-size:16.5px;
+  line-height:1.78;
+}
+.tools-list-title{
+  font-size:22px;
+}
+.tools-list-count{
+  font-size:14px;
+}
+.tools-grid{
+  gap:14px;
+}
+.tool-card{
+  min-height:158px;
+  padding:24px;
+  border-radius:18px;
+}
+.tool-name{
+  font-size:18.5px;
+}
+.tool-badge{
+  font-size:11.5px;
+}
+.tool-desc{
+  font-size:15.5px;
+  line-height:1.68;
+}
+.search-cat-tag{
+  font-size:12px;
+}
+.ftr-community-title{
+  font-size:20px;
+}
+.social-link{
+  padding:11px 16px;
+}
+.social-label{
+  font-size:15px;
+}
+.ftr-copy{
+  font-size:14px;
+}
+
+/* Large desktop */
+@media(min-width:1440px){
+  .container{max-width:1340px}
+  .hdr-title{font-size:64px}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .tools-grid,.search-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Standard desktop / laptop */
+@media(min-width:1024px) and (max-width:1439px){
+  .container{max-width:1180px}
+  .hdr-title{font-size:54px}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .tools-grid,.search-grid{grid-template-columns:repeat(3,1fr)}
+  .cat-card{min-height:160px}
+}
+
+/* Tablet landscape / small laptop */
+@media(min-width:768px) and (max-width:1023px){
+  body{font-size:16px}
+  .container{padding-left:22px;padding-right:22px}
+  .hdr{padding-top:54px}
+  .hdr-title{font-size:46px}
+  .hdr-stats{font-size:17px}
+  .hdr-sub{font-size:14.5px}
+  .intro-card{padding:34px 32px}
+  .intro-text{font-size:17.5px}
+  .brand-social-grid{grid-template-columns:repeat(4,1fr)}
+  .kr-popular-grid{grid-template-columns:repeat(3,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-card{min-height:150px;padding:23px}
+  .cat-name{font-size:18px}
+  .cat-sub{font-size:14px}
+  .tools-grid,.search-grid{grid-template-columns:repeat(2,1fr)}
+  .tool-card{min-height:146px}
+  .tool-name{font-size:17px}
+  .tool-desc{font-size:14.5px}
+  .hero-title{font-size:32px}
+  .hero-concept{font-size:16.5px}
+}
+
+/* Large phones / small tablets */
+@media(min-width:541px) and (max-width:767px){
+  body{font-size:16px}
+  .container{padding-left:17px;padding-right:17px}
+  .hdr{padding-top:44px}
+  .hdr-title{font-size:39px}
+  .hdr-stats{font-size:16px}
+  .hdr-sub{font-size:14px}
+  .hdr-badge{font-size:13.5px}
+  .intro-card{padding:28px 24px;border-radius:21px}
+  .intro-text{font-size:16.5px;line-height:1.82}
+  .brand-head{flex-direction:column;align-items:flex-start}
+  .brand-home{width:100%;justify-content:center}
+  .brand-social-grid{grid-template-columns:repeat(3,1fr)}
+  .kr-popular-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:1fr}
+  .cat-card{min-height:126px;padding:21px}
+  .cat-name{font-size:18px}
+  .cat-sub{font-size:14px}
+  .tools-grid,.search-grid{grid-template-columns:1fr}
+  .tool-card{min-height:124px}
+  .hero-banner{padding:30px}
+  .hero-title{font-size:28px}
+  .hero-subtitle{font-size:16px}
+  .hero-concept{font-size:15.5px}
+  .info-item{font-size:15px}
+}
+
+/* Smartphones */
+@media(max-width:540px){
+  body{
+    font-size:15.5px;
+    line-height:1.72;
+  }
+  .top-nav{
+    padding:8px 12px;
+  }
+  .top-nav-inner{
+    gap:8px;
+  }
+  .home-btn{
+    font-size:12.5px;
+    padding:8px 11px;
+  }
+  .top-nav-title{
+    font-size:10.8px;
+    text-align:right;
+  }
+  .container{
+    padding-left:14px;
+    padding-right:14px;
+    padding-bottom:40px;
+  }
+  .hdr{
+    padding-top:36px;
+    padding-bottom:20px;
+  }
+  .hdr::before{
+    font-size:9px;
+    letter-spacing:.16em;
+  }
+  .hdr-badge{
+    font-size:12.5px;
+    padding:8px 12px;
+  }
+  .hdr-title{
+    font-size:34px;
+    line-height:1.1;
+  }
+  .hdr-title::after{
+    width:66px;
+    margin-top:15px;
+  }
+  .hdr-stats{
+    font-size:15px;
+    margin-top:13px;
+  }
+  .hdr-sub{
+    font-size:13px;
+  }
+  .hdr-updated{
+    font-size:11.5px;
+  }
+  .intro-card{
+    padding:25px 20px;
+    border-radius:20px;
+  }
+  .intro-text{
+    font-size:16px;
+    line-height:1.82;
+  }
+  .intro-text .cta{
+    font-size:16.5px;
+  }
+  .brand-panel,.kr-popular{
+    padding:17px;
+    border-radius:18px;
+  }
+  .brand-title{
+    font-size:18px;
+  }
+  .brand-desc{
+    font-size:13.5px;
+  }
+  .brand-home{
+    width:100%;
+    justify-content:center;
+    font-size:13.5px;
+  }
+  .brand-social-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+  .brand-social-link{
+    min-height:78px;
+  }
+  .brand-social-label{
+    font-size:12.5px;
+  }
+  .kr-popular-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .kr-popular-title{
+    font-size:17.5px;
+  }
+  .kr-popular-sub{
+    font-size:13px;
+  }
+  .kr-popular-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .kr-popular-link{
+    min-height:90px;
+  }
+  .kr-popular-name{
+    font-size:14px;
+  }
+  .kr-popular-note{
+    font-size:11.5px;
+  }
+  .search-wrap{
+    margin-bottom:25px;
+  }
+  .search-input{
+    font-size:15.5px;
+    padding:16px 17px 16px 46px;
+  }
+  .cat-grid{
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+  .cat-card{
+    min-height:118px;
+    padding:18px;
+    border-radius:17px;
+  }
+  .cat-inner{
+    gap:11px;
+  }
+  .cat-icon{
+    width:49px;
+    height:49px;
+    font-size:23px;
+  }
+  .cat-name{
+    font-size:17px;
+  }
+  .cat-sub{
+    font-size:13px;
+    line-height:1.43;
+  }
+  .cat-count{
+    font-size:11px;
+  }
+  .hero-banner{
+    padding:24px 20px;
+    border-radius:20px;
+  }
+  .hero-main-icon{
+    width:56px;
+    height:56px;
+    font-size:31px;
+  }
+  .hero-title{
+    font-size:25px;
+  }
+  .hero-subtitle{
+    font-size:14.5px;
+  }
+  .hero-concept{
+    font-size:15px;
+    line-height:1.76;
+  }
+  .info-toggle-btn{
+    padding:14px 15px;
+  }
+  .info-toggle-label{
+    font-size:14.5px;
+  }
+  .info-panel{
+    padding:18px;
+  }
+  .info-section-title{
+    font-size:15.5px;
+  }
+  .info-item{
+    font-size:14.5px;
+  }
+  .tools-list-title{
+    font-size:18.5px;
+  }
+  .tools-list-count{
+    font-size:12px;
+  }
+  .tools-grid,.search-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .tool-card{
+    min-height:118px;
+    padding:18px;
+  }
+  .tool-name{
+    font-size:16px;
+  }
+  .tool-desc{
+    font-size:13.8px;
+  }
+  .tool-arrow{
+    width:26px;
+    height:26px;
+  }
+  .ftr{
+    margin-top:46px;
+  }
+  .ftr-community-title{
+    font-size:17px;
+  }
+  .social-grid{
+    gap:7px;
+  }
+  .social-link{
+    padding:9px 11px;
+  }
+  .social-label{
+    font-size:12.5px;
+  }
+  .ftr-copy{
+    font-size:12.5px;
+  }
+}
+
+/* Very small phones */
+@media(max-width:380px){
+  .hdr-title{font-size:30px}
+  .hdr-badge{font-size:11.5px}
+  .brand-social-grid,.kr-popular-grid{grid-template-columns:1fr}
+  .cat-card{padding:16px}
+  .cat-count{display:none}
+}
+
 </style>
 </head>
 <body>
